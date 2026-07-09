@@ -6,6 +6,7 @@ pluralizeListTitles: false
 enableGitInfo: true
 pygmentsUseClasses: true
 disableHugoGeneratorInject: true
+baseURL: https://birdcall-online.github.io/kuma
 
 date:
   locale: ko_KR
