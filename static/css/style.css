@@ -318,34 +318,33 @@ main {
 }
 
 .sticker {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 9999;
-  cursor: pointer;
-  padding: 60px 80px;
-  transform: rotate(-4deg);
-  box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.10);
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-align: center;
-  background-color: #FFFF92;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    cursor: pointer;
+    padding: 60px 80px;
+    transform: rotate(-4deg);
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: center;
+    background-color: #ffff92;
 }
 
 .sticker::after {
-  content: "";
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  background: rgba(0,0,0,0.05);
-  box-shadow:
-    inset 2px 2px 4px rgba(0,0,0,0.15),
-    inset -2px -2px 4px rgba(255,255,255,0.5);
+    content: "";
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.05);
+    box-shadow:
+        inset 2px 2px 4px rgba(0, 0, 0, 0.15),
+        inset -2px -2px 4px rgba(255, 255, 255, 0.5);
 }
-
 
 .container.ex-kuma a,
 .container.ex-kuma p,
@@ -757,7 +756,7 @@ details[open] > summary {
 .clock {
     position: fixed;
     top: 50%;
-    transform: translateY(-50%);
+    transform: translate(-50%, -50%);
     z-index: 999;
     pointer-events: none;
     width: 76px;
@@ -833,14 +832,13 @@ main .container.kuma .clock.clock-left {
 
 @media screen and (max-width: 1280px) {
     .sticker {
-          transform: rotate(-4deg) scale(0.5);
-          transform-origin: top right;
-          box-shadow: 3px 3px 3px 3px rgba(0,0,0,0.10);
-      }
+        transform: rotate(-4deg) scale(0.5);
+        transform-origin: top right;
+        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+    }
 }
 
 @media screen and (max-width: 768px) {
-
 }
 
 @media screen and (max-width: 580px) {
