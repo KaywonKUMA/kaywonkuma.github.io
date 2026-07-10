@@ -842,15 +842,15 @@ main .container.kuma .clock.clock-left {
 }
 
 @media screen and (max-width: 580px) {
-    main .container.kuma header div {
-        position: fixed;
-        top: 50%;
-        right: calc(50% + 15px);
-    }
-
+    main .container.kuma header div,
     main .container.ex-kuma header div {
         position: fixed;
         top: 50%;
+        transform: translateY(-50%);
+    }
+
+    main .container.kuma header div {
+        right: calc(50% + 15px);
     }
 
     main .container.ex-kuma {
