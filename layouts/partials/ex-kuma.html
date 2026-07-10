@@ -16,8 +16,11 @@
     $sticker.Params.ko.description }}
     <div class="sticker" id="sticker">
         <div id="kuma-modal">
-            <p>{{ $sticker.Params.ko.title }}</p>
-            <p>{{ $sticker.Params.ko.description | safeHTML }}</p>
+            {{ with $sticker.Params.ko.title }}
+            <p>{{ . }}</p>
+            <br />
+            {{ end }}
+            <div>{{ $sticker.Params.ko.description | markdownify }}</div>
         </div>
     </div>
     {{ end }}

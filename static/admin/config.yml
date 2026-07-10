@@ -198,23 +198,18 @@ collections:
         file: content/exkuma-sticker.md
         i18n: true
         fields:
-            - label: 제목
-              name: title
-              widget: string
-              i18n: true
-              required: false
+          - label: 제목
+            name: title
+            widget: string
+            i18n: true
+            required: false
 
-            - label: 내용
-              name: description
-              widget: markdown
-              i18n: true
-              required: false
-              hint: "내용을 비워두면 스티커가 표시되지 않습니다."
-              default: |
-                  UNSETTLED<br>
-                  INTERNATIONAL<br>
-                  WORKSHOP<br>
-                  PROGRAMME OF KUMA
+          - label: 내용
+            name: description
+            widget: text
+            i18n: true
+            required: false
+            hint: "내용을 비워두면 스티커가 표시되지 않습니다."
 
   - name: exkuma-about
     label: EX-KUMA About
