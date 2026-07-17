@@ -181,13 +181,15 @@ a {
     text-decoration: none;
 }
 
-a:hover {
+a:not(header a):hover {
   color: var(--point-color);
   font-family: inherit;
   font-size: inherit;
   text-decoration: none;
   cursor: pointer;
 }
+
+
 
 .title a:hover,
 .exhibition-title a:hover,
