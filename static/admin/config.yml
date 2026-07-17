@@ -137,6 +137,26 @@ collections:
                 widget: number
                 i18n: duplicate
 
+      - label: 기타 링크
+        name: etc_items
+        widget: list
+        i18n: true
+        summary: "{{fields.type}} · {{fields.title}}
+        fields:
+          - label: 제목
+            name: title
+            widget: string
+            hint: PDF 등
+            i18n: true
+            required: false
+
+          - label: 링크
+            name: link
+            widget: string
+            hint: Google Drive 공유 링크 등
+            i18n: duplicate
+            required: false
+
   - name: exhibitions
     label: KUMA Exhibitions
     folder: /content/exhibitions
@@ -215,18 +235,21 @@ collections:
                 widget: string
                 hint: PDF 등
                 i18n: true
+                required: false
 
               - label: 제목
                 name: title
                 widget: string
                 hint: 대관신청서 등
                 i18n: true
+                required: false
 
               - label: 링크
                 name: link
                 widget: string
                 hint: Google Drive 공유 링크 등
                 i18n: duplicate
+                required: false
 
   - name: kuma-news
     label: KUMA News

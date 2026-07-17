@@ -1,0 +1,28 @@
+{{ $committee := site.GetPage "/committee" }}
+
+<div class="committee-list">
+    <div class="committee-grid">
+        <div data-lang="ko">
+            {{ range $committee.Params.ko.items }}
+            <div class="committee-item-container">
+                <div class="committee-item">
+                    <div class="role">{{ .role }}</div>
+                    <div class="name">{{ .name }}</div>
+                    <div class="affiliation">{{ .affiliation }}</div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+        <div data-lang="en">
+            {{ range $committee.Params.en.items }}
+            <div class="committee-item-container">
+                <div class="committee-item">
+                    <div class="role">{{ .role }}</div>
+                    <div class="name">{{ .name }}</div>
+                    <div class="affiliation">{{ .affiliation }}</div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

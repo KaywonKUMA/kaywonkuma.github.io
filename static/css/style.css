@@ -181,6 +181,25 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+  color: var(--point-color);
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.title a:hover,
+.exhibition-title a:hover,
+.detail-link:hover,
+.download-link:hover {
+  color: var(--point-color);
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+}
+
+
 ul {
     list-style: none;
     padding: 0;
@@ -267,7 +286,7 @@ main {
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    height: 100vh;
+    height: 100dvh;
     scrollbar-width: none;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -843,6 +862,7 @@ details[open] > summary {
 
 .upcoming-item .categories {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
 }
 
@@ -961,18 +981,38 @@ main .container.kuma .clock.clock-left {
 }
 
 @media screen and (max-width: 768px) {
+    :root {
+        --font-base: 12pt;
+        --font-small: 9pt;
+        --font-subsection: 10.5pt;
+
+        --line-base: 1.4;
+        --line-tight: 1.15;
+    }
 }
 
 @media screen and (max-width: 580px) {
-    main .container.kuma header div,
-    main .container.ex-kuma header div {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
+    :root {
+        --font-base: 11pt;
+        --font-small: 8.5pt;
+        --font-subsection: 10pt;
+
+        --line-base: 1.35;
+        --line-tight: 1.1;
     }
 
-    main .container.kuma header div {
-        right: calc(50% + 15px);
+    main .container.kuma header, main .container.ex-kuma header {
+        padding: 0;
+    }
+
+    main .container.kuma header div,
+    main .container.ex-kuma header div {
+        width: 100%;
+        height: 100dvh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
     }
 
     main .container.ex-kuma {
