@@ -141,7 +141,7 @@ collections:
         name: etc_items
         widget: list
         i18n: true
-        summary: "{{fields.type}} · {{fields.title}}
+        summary: "{{fields.type}} · {{fields.title}}"
         fields:
           - label: 제목
             name: title
