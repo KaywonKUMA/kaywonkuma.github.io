@@ -27,15 +27,13 @@ media_libraries:
       transformations:
         raster_image:
           format: webp
-          quality: 80
+          quality: 85
           width: 1000
           height: 1000
         svg:
           optimize: true
 
 collections:
-  - divider: true
-
   - name: kuma-about
     label: KUMA About
     i18n: true
@@ -137,25 +135,25 @@ collections:
                 widget: number
                 i18n: duplicate
 
-      - label: 기타 링크
-        name: etc_items
-        widget: list
-        i18n: true
-        summary: "{{fields.type}} · {{fields.title}}"
-        fields:
-          - label: 제목
-            name: title
-            widget: string
-            hint: PDF 등
+          - label: 기타 링크
+            name: etc_items
+            widget: list
             i18n: true
-            required: false
+            summary: "{{fields.title}} · {{fields.link}}"
+            fields:
+              - label: 제목
+                name: title
+                widget: string
+                hint: PDF 등
+                i18n: true
+                required: false
 
-          - label: 링크
-            name: link
-            widget: string
-            hint: Google Drive 공유 링크 등
-            i18n: duplicate
-            required: false
+              - label: 링크
+                name: link
+                widget: string
+                hint: Google Drive 공유 링크 등
+                i18n: duplicate
+                required: false
 
   - name: exhibitions
     label: KUMA Exhibitions
@@ -299,7 +297,7 @@ collections:
                 widget: image
                 hint: 협력사 로고 이미지
 
-  - divider: true
+  # - divider: true
 
   - name: exkuma-sticker
     label: EX-KUMA Sticker

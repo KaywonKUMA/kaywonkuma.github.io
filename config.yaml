@@ -6,9 +6,9 @@ pluralizeListTitles: false
 enableGitInfo: true
 pygmentsUseClasses: true
 disableHugoGeneratorInject: true
-
 date:
   locale: ko_KR
+timeZone: Asia/Seoul
 
 buildFuture: true
 

@@ -1,7 +1,5 @@
 <div class="container kuma">
-    {{ partial "clock.html" (dict
-        "id" "korea-clock"
-        "class" "clock-left"
+    {{ partial "common/clock.html" (dict "id" "korea-clock" "class" "clock-left"
     ) }}
     <header>
         <nav>
@@ -17,27 +15,25 @@
     </header>
 
     <section>
-        {{ partial "kuma/about.html" . }}
-
-        {{ partial "kuma/exhibition.html" . }}
-
-        {{ partial "kuma/resources.html" . }}
-
-        {{ partial "news.html" (dict
-            "id" "kuma-news"
-            "section" "kuma-news"
-        ) }}
+        {{ partial "kuma/about.html" . }} {{ partial "kuma/exhibition.html" . }}
+        {{ partial "kuma/resources.html" . }} {{ partial "common/news.html"
+        (dict "id" "kuma-news" "section" "kuma-news" ) }}
         <div class="contact-container">
             <div class="subtitle">Contact</div>
             <div>
                 <p>
-                    <span data-lang="ko">대한민국 경기도 의왕시 계원대학로 66</span>
-                    <span data-lang="en">66, Gyewondaehak-ro, Uiwang-si, Gyeonggi-do, Republic of Korea</span>
+                    <span data-lang="ko"
+                        >대한민국 경기도 의왕시 계원대학로 66</span
+                    >
+                    <span data-lang="en"
+                        >66, Gyewondaehak-ro, Uiwang-si, Gyeonggi-do, Republic
+                        of Korea</span
+                    >
                 </p>
                 <p><a href="mailto:kuma@kaywon.ac.kr">kuma@kaywon.ac.kr</a></p>
             </div>
         </div>
-        {{ partial "partners.html" (dict "page" "/kuma-partners") }}
+        {{ partial "common/partners.html" (dict "page" "/kuma-partners") }}
     </section>
     <div class="bottom-img-container">
         <img class="bottom-img" src="/assets/kuma02.jpg" />

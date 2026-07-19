@@ -1,8 +1,6 @@
 <div class="container ex-kuma">
-    {{ partial "clock.html" (dict
-        "id" "local-clock"
-        "class" "clock-right"
-    ) }}
+    {{ partial "common/clock.html" (dict "id" "local-clock" "class"
+    "clock-right" ) }}
     <header>
         <div>
             <a href="/ex-kuma" class="title">EX-KUMA</a>
@@ -19,17 +17,10 @@
     {{ partial "ex-kuma/sticker.html" . }}
 
     <section>
-        {{ partial "ex-kuma/about.html" . }}
-
-        {{ partial "ex-kuma/unsettled.html" . }}
-
-        {{ partial "news.html" (dict
-            "id" "exkuma-news"
-            "section" "exkuma-news"
-        ) }}
-
-        {{ partial "partners.html" (dict "page" "/exkuma-partners") }}
-
+        {{ partial "ex-kuma/about.html" . }} {{ partial "ex-kuma/unsettled.html"
+        . }} {{ partial "common/news.html" (dict "id" "exkuma-news" "section"
+        "exkuma-news" ) }} {{ partial "common/partners.html" (dict "page"
+        "/exkuma-partners") }}
     </section>
     <div class="bottom-img-container">
         <img class="bottom-img" src="/assets/exkuma02.jpg" alt="EX-KUMA" />

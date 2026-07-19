@@ -2,106 +2,113 @@
     {{ $unsettled := site.GetPage "/exkuma-unsettled" }}
 
     <div class="poster-container">
-        <img src="{{ $unsettled.Params.ko.poster }}" alt="Unsettled poster">
+        <img src="{{ $unsettled.Params.ko.poster }}" alt="Unsettled poster" />
     </div>
 
     <div class="unsettled-about">
-        <div class="section-title">Unsettled <span class="unsettled-year"></span> </div>
+        <div class="section-title">
+            Unsettled <span class="unsettled-year"></span>
+        </div>
         <div class="upcoming-container">
-            {{ $today := now }}
-            {{ $workshops := where .Site.RegularPages "Section" "workshops" }}
-            {{ $upcoming := slice }}
-            {{ range $workshops }}
-                {{ $endDate := time .Params.ko.endDate }}
-                {{ if ge $endDate $today }}
-                    {{ $upcoming = $upcoming | append . }}
-                {{ end }}
-            {{ end }}
-            {{ range sort $upcoming ".Params.ko.startDate" "asc" }}
+            {{ $today := now }} {{ $workshops := where .Site.RegularPages
+            "Section" "workshops" }} {{ $upcoming := slice }} {{ range
+            $workshops }} {{ $endDate := time .Params.ko.endDate }} {{ if ge
+            $endDate $today }} {{ $upcoming = $upcoming | append . }} {{ end }}
+            {{ end }} {{ range sort $upcoming ".Params.ko.startDate" "asc" }}
             <div class="upcoming-item">
                 <div class="top">
                     <div data-lang="ko">
                         <div class="categories">
                             {{ range .Params.ko.category }}
-                                <span class="category">{{ . }}</span>
+                            <span class="category">{{ . }}</span>
                             {{ end }}
                         </div>
                         <div class="title">
                             <b>{{ .Params.ko.title }}</b>
                         </div>
-                        <div>
-                            {{ .Params.ko.description | markdownify }}
-                        </div>
+                        <div>{{ .Params.ko.description | markdownify }}</div>
                     </div>
                     <div data-lang="en">
                         <div class="categories">
                             {{ range .Params.en.category }}
-                                <span class="category">{{ . }}</span>
+                            <span class="category">{{ . }}</span>
                             {{ end }}
                         </div>
                         <div class="title">
                             <b>{{ .Params.en.title }}</b>
                         </div>
-                        <div>
-                            {{ .Params.en.description | markdownify }}
-                        </div>
+                        <div>{{ .Params.en.description | markdownify }}</div>
                     </div>
                 </div>
-                <div class="bottom">
+                <div
+                    class="bottom {{ if .Params.ko.applicationLink }} apply{{ end }}"
+                >
                     <div class="left">
                         <div data-lang="ko">
                             <div class="master">
-                                마스터: {{ .Params.ko.master }}
+                                {{ if .Params.ko.master }} 마스터: {{
+                                .Params.ko.master }} {{ else }} 마스터: 미정 {{
+                                end }}
                             </div>
                             <div class="date">
-                                일정 :
-                                {{ time .Params.ko.startDate | time.Format "2006. 01. 02" }}
-                                &mdash;
-                                {{ time .Params.ko.endDate | time.Format "01. 02" }}
-                                {{ if .Params.ko.startTime }}, {{ .Params.ko.startTime }} &mdash; {{ .Params.ko.endTime }}
-                                {{ end }}
+                                일정 : {{ time .Params.ko.startDate |
+                                time.Format "2006. 01. 02" }} &mdash; {{ time
+                                .Params.ko.endDate | time.Format "01. 02" }} {{
+                                if .Params.ko.startTime }}, {{
+                                .Params.ko.startTime }} &mdash; {{
+                                .Params.ko.endTime }} {{ end }}
                             </div>
                             <div class="capacity">
                                 모집인원: {{ .Params.ko.capacity }}명
                             </div>
-                            {{ with .Params.ko.note }}
+                            {{ if .Params.ko.note }}
                             <br />
-                            <div class="note">
-                                ※ {{ . }}
-                            </div>
+                            <div class="note">※ {{ .Params.ko.note }}</div>
                             {{ end }}
                         </div>
                         <div data-lang="en">
                             <div class="master">
-                                Master: {{ .Params.en.master }}
+                                {{ if .Params.en.master }} Master: {{
+                                .Params.en.master }} {{ else }} Master: TBA {{
+                                end }}
                             </div>
                             <div class="date">
-                                Date & Time :
-                                {{ time .Params.en.startDate | time.Format "2006. 01. 02" }}
-                                &mdash;
-                                {{ time .Params.en.endDate | time.Format "01. 02" }}
-                                {{ if .Params.en.startTime }}, {{ .Params.en.startTime }} &mdash; {{ .Params.en.endTime }}
-                                {{ end }}
+                                Date & Time : {{ time .Params.en.startDate |
+                                time.Format "2006. 01. 02" }} &mdash; {{ time
+                                .Params.en.endDate | time.Format "01. 02" }} {{
+                                if .Params.en.startTime }}, {{
+                                .Params.en.startTime }} &mdash; {{
+                                .Params.en.endTime }} {{ end }}
                             </div>
                             <div class="capacity">
                                 Capacity: {{ .Params.en.capacity }}
                             </div>
-                            {{ with .Params.en.note }}
+                            {{ if .Params.en.note }}
                             <br />
-                            <div class="note">
-                                ※ {{ . }}
-                            </div>
+                            <div class="note">※ {{ .Params.en.note }}</div>
                             {{ end }}
                         </div>
                     </div>
+                    {{ if .Params.ko.applicationLink }}
                     <div class="right">
-                        <a data-lang="ko" target="_blank" href="{{ .Params.ko.applicationLink }}">
+                        <a
+                            class="apply"
+                            data-lang="ko"
+                            target="_blank"
+                            href="{{ .Params.ko.applicationLink }}"
+                        >
                             신청
                         </a>
-                        <a data-lang="en" target="_blank" href="{{ .Params.en.applicationLink }}">
+                        <a
+                            class="apply"
+                            data-lang="en"
+                            target="_blank"
+                            href="{{ .Params.en.applicationLink }}"
+                        >
                             Apply
                         </a>
                     </div>
+                    {{ end }}
                 </div>
             </div>
             {{ end }}
@@ -118,16 +125,14 @@
         </div>
 
         <div class="workshops-grid">
-            {{ range sort (where (where site.RegularPages "Section" "workshops") "Params.ko.startDate" "<" (now.Format "2006-01-02")) ".Params.ko.startDate" "desc" }}
+            {{ range sort (where (where site.RegularPages "Section" "workshops")
+            "Params.ko.startDate" "<" (now.Format "2006-01-02"))
+            ".Params.ko.startDate" "desc" }}
             <div class="workshops-item-container">
                 <div class="workshops-item">
                     <div class="type">
-                        <span data-lang="ko"
-                            >{{ .Params.ko.type }}</span
-                        >
-                        <span data-lang="en"
-                            >{{ .Params.en.type }}</span
-                        >
+                        <span data-lang="ko">{{ .Params.ko.type }}</span>
+                        <span data-lang="en">{{ .Params.en.type }}</span>
                     </div>
 
                     <div class="title">
@@ -161,8 +166,8 @@
                                 </div>
                                 <div data-lang="ko">
                                     <div class="desription">
-                                        {{ .Params.ko.description |
-                                        markdownify }}
+                                        {{ .Params.ko.description | markdownify
+                                        }}
                                     </div>
                                     <br />
                                     {{ with .Params.ko.participants }}
@@ -175,8 +180,8 @@
 
                                 <div data-lang="en">
                                     <div class="desription">
-                                        {{ .Params.en.description |
-                                        markdownify }}
+                                        {{ .Params.en.description | markdownify
+                                        }}
                                     </div>
                                     <br />
                                     {{ with .Params.en.participants }}
