@@ -506,17 +506,23 @@ details[open] > summary {
 }
 
 main .workshops-head,
-main .workshops-item,
-main .exhibitions-head,
-main .exhibitions-item {
+main .workshops-item {
     grid-template-columns: 120px minmax(0, 1fr);
 }
 
+main .exhibitions-head,
+main .exhibitions-item {
+    grid-template-columns: 100px minmax(0, 1fr);
+}
+
 .workshops-head,
-.workshops-item,
+.workshops-item {
+    grid-template-columns: clamp(150px, 15vw, 200px) minmax(0, 1fr);
+}
+
 .exhibitions-head,
 .exhibitions-item {
-    grid-template-columns: clamp(150px, 15vw, 200px) minmax(0, 1fr);
+    grid-template-columns: clamp(90px, 15vw, 200px) minmax(0, 1fr);
 }
 
 .exhibitions-item summary {
