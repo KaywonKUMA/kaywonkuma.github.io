@@ -1,76 +1,71 @@
-            {{ $collections := site.GetPage "/collections" }}
+{{ $collections := site.GetPage "/collections" }}
 
-            <div class="collections-list">
-                <div class="collections-grid">
+<div class="collections-list">
+    <div class="collections-grid">
+        <div data-lang="ko">
+            {{ range $collections.Params.ko.items }}
+            <div class="collections-item-container">
+                <div class="collections-item">
+                    <div class="type">{{ .category }}</div>
 
-                    <div data-lang="ko">
-                        {{ range $collections.Params.ko.items }}
-                        <div class="collections-item-container">
-                            <div class="collections-item">
-                                <div class="type">{{ .category }}</div>
-
-                                <div class="title">
-                                    {{ .artist }}, &lt;{{ .title }}&gt;, {{ .size }}
-                                    <img
-                                        class="collections-image"
-                                        loading="lazy"
-                                        src="{{ .image }}"
-                                    />
-                                </div>
-
-                                <div class="date">{{ .year }}</div>
-                            </div>
-                        </div>
-                        {{ end }}
-
-                        {{ range $collections.Params.ko.etc_items }}
-                        <div class="collections-item-container">
-                            <div class="collections-item collections-item--link">
-                                <div class="type">...</div>
-
-                                <div class="title">
-                                    <a href="{{ .link }}" target="_blank" rel="noopener">
-                                        {{ .title }}
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        {{ end }}
+                    <div class="title">
+                        {{ .artist }}, &lt;{{ .title }}&gt;, {{ .size }}
+                        <img
+                            class="collections-image"
+                            loading="lazy"
+                            src="{{ .image }}"
+                        />
                     </div>
 
-                    <div data-lang="en">
-                        {{ range $collections.Params.en.items }}
-                        <div class="collections-item-container">
-                            <div class="collections-item">
-                                <div class="type">{{ .category }}</div>
-
-                                <div class="title">
-                                    {{ .artist }}, &lt;{{ .title }}&gt;, {{ .size }}
-                                    <img
-                                        class="collections-image"
-                                        loading="lazy"
-                                        src="{{ .image }}"
-                                    />
-                                </div>
-
-                                <div class="date">{{ .year }}</div>
-                            </div>
-                        </div>
-                        {{ end }}
-                        {{ range $collections.Params.en.etc_items }}
-                        <div class="collections-item-container">
-                            <div class="collections-item collections-item--link">
-                                <div class="type">...</div>
-
-                                <div class="title">
-                                    <a href="{{ .link }}" target="_blank" rel="noopener">
-                                        {{ .title }}
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        {{ end }}
-                    </div>
-
+                    <div class="date">{{ .year }}</div>
                 </div>
             </div>
+            {{ end }} {{ range $collections.Params.ko.etc_items }}
+            <div class="collections-item-container">
+                <div class="collections-item collections-item--link">
+                    <div class="type">...</div>
+
+                    <div class="title">
+                        <a href="{{ .link }}" target="_blank" rel="noopener">
+                            {{ .title }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+
+        <div data-lang="en">
+            {{ range $collections.Params.en.items }}
+            <div class="collections-item-container">
+                <div class="collections-item">
+                    <div class="type">{{ .category }}</div>
+
+                    <div class="title">
+                        {{ .artist }}, &lt;{{ .title }}&gt;, {{ .size }}
+                        <img
+                            class="collections-image"
+                            loading="lazy"
+                            src="{{ .image }}"
+                        />
+                    </div>
+
+                    <div class="date">{{ .year }}</div>
+                </div>
+            </div>
+            {{ end }} {{ range $collections.Params.en.etc_items }}
+            <div class="collections-item-container">
+                <div class="collections-item collections-item--link">
+                    <div class="type">...</div>
+
+                    <div class="title">
+                        <a href="{{ .link }}" target="_blank" rel="noopener">
+                            {{ .title }}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

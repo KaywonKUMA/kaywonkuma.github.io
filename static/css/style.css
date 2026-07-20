@@ -534,12 +534,23 @@ main .exhibitions-item {
     grid-template-columns: 100%;
 }
 
+.collections-grid,
+.committee-grid {
+    border-top: 1px solid black;
+}
+
 .collections-item {
-    grid-template-columns: 95px auto 70px;
+    grid-template-columns:
+        clamp(75px, 8vw, 95px)
+        auto
+        clamp(60px, 8vw, 90px);
 }
 
 .committee-item {
-    grid-template-columns: 95px minmax(0, 1fr) 150px;
+    grid-template-columns:
+        clamp(75px, 8vw, 95px)
+        minmax(0, 1fr)
+        clamp(140px, 15vw, 180px);
 }
 
 .content {
@@ -640,8 +651,14 @@ main .exhibitions-item {
     z-index: 1000;
 }
 
-.collections-item .title:hover .collections-image {
+.collections-item.active .collections-image {
     display: block;
+}
+
+@media (hover: hover) {
+    .collections-item:hover .collections-image {
+        display: block;
+    }
 }
 
 .mark-container {

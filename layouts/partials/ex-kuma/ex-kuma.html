@@ -14,8 +14,6 @@
         </nav>
     </header>
 
-    {{ partial "ex-kuma/sticker.html" . }}
-
     <section>
         {{ partial "ex-kuma/about.html" . }} {{ partial "ex-kuma/unsettled.html"
         . }} {{ partial "common/news.html" (dict "id" "exkuma-news" "section"
@@ -26,3 +24,4 @@
         <img class="bottom-img" src="/assets/exkuma02.jpg" alt="EX-KUMA" />
     </div>
 </div>
+{{ partial "ex-kuma/sticker.html" . }}

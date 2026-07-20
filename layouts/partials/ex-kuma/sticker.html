@@ -1,8 +1,8 @@
-    {{ $sticker := site.GetPage "/exkuma-sticker" }} {{ if
-    $sticker.Params.ko.description }}
-    <div class="sticker" id="sticker">
-        <div id="kuma-modal">
-            <div>{{ $sticker.Params.ko.description | markdownify }}</div>
-        </div>
+{{ $sticker := site.GetPage "/exkuma-sticker" }} {{ if
+$sticker.Params.ko.description }}
+<div class="sticker" id="sticker">
+    <div id="kuma-modal">
+        <div>{{ $sticker.Params.ko.description | markdownify }}</div>
     </div>
-    {{ end }}
+</div>
+{{ end }}
