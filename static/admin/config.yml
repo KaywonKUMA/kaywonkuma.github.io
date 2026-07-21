@@ -51,7 +51,7 @@ collections:
 
           - label: 소개
             name: description
-            widget: text
+            widget: richtext
             i18n: true
             required: true
 
@@ -297,7 +297,7 @@ collections:
                 widget: image
                 hint: 협력사 로고 이미지
 
-  # - divider: true
+  - divider: true
 
   - name: exkuma-sticker
     label: EX-KUMA Sticker
