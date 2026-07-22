@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: KaywonKUMA/kuma
+  repo: KaywonKUMA/kumakaywon.github.io
   branch: main
   base_url: https://sveltia-cms-auth.kuma-d9d.workers.dev
 
