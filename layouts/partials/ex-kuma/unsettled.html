@@ -1,9 +1,10 @@
 <div class="unsettled-container" id="exkuma-unsettled">
-    {{ $unsettled := site.GetPage "/exkuma-unsettled" }}
-
+    {{ $unsettled := site.GetPage "/exkuma-unsettled" }} {{ if
+    $unsettled.Params.ko.poster }}
     <div class="poster-container">
         <img src="{{ $unsettled.Params.ko.poster }}" alt="Unsettled poster" />
     </div>
+    {{ end }}
 
     <div class="unsettled-about">
         <div class="section-title">
