@@ -7,12 +7,13 @@
         </div>
         <div class="news-grid">
             <div data-lang="ko">
-                {{ range where site.RegularPages "Section" "kuma-news" }}
+                {{ range where site.RegularPages "Section" (.section) }}
                 <div class="news-item-container">
                     <div class="news-item">
                         <div class="type">{{ .Params.ko.type }}</div>
                         <div class="title">
-                            <a href="{{ .Params.ko.link }}"
+                            <a
+                                href="{{ .Params.ko.link }}"
                                 onclick="
                                     let w = window.innerWidth * 0.5;
                                     let h = window.innerHeight * 0.8;
@@ -21,7 +22,9 @@
                                         'pdfwindow',
                                         `width=${w},height=${h}`,
                                     );
-                                    return false;">
+                                    return false;
+                                "
+                            >
                                 {{ .Params.ko.title }}
                             </a>
                         </div>
@@ -30,12 +33,13 @@
                 {{ end }}
             </div>
             <div data-lang="en">
-                {{ range where site.RegularPages "Section" "kuma-news" }}
+                {{ range where site.RegularPages "Section" (.section) }}
                 <div class="news-item-container">
                     <div class="news-item">
                         <div class="type">{{ .Params.en.type }}</div>
                         <div class="title">
-                            <a href="{{ .Params.en.link }}"
+                            <a
+                                href="{{ .Params.en.link }}"
                                 onclick="
                                     let w = window.innerWidth * 0.5;
                                     let h = window.innerHeight * 0.8;
@@ -44,7 +48,9 @@
                                         'pdfwindow',
                                         `width=${w},height=${h}`,
                                     );
-                                    return false;">
+                                    return false;
+                                "
+                            >
                                 {{ .Params.en.title }}
                             </a>
                         </div>
