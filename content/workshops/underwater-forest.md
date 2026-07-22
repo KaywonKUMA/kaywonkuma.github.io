@@ -9,11 +9,11 @@ ko:
   startDate: 2026-08-19
   endDate: 2026-08-25
   startTime: 10:00
-  endTime: 13:30
+  endTime: 13:00
   master: Carolina Pacheco Glen (NOTPLA 디자이너)
   capacity: 20
   participants: 0
-  applicationLink: https://www.google.com
+  applicationLink: https://docs.google.com/forms/d/e/1FAIpQLSc9zLCouj116uGqsxBQQF_ygA4Ez4CDJ9_cjIFPu6TALCCngw/viewform
   note: AI 동시통역 시스템 및 전문 통역 지원
   images: []
 en:
@@ -28,7 +28,7 @@ en:
   master: Carolina Pacheco Glen (Designer, NOTPLA)
   capacity: 20
   participants: 0
-  applicationLink: https://www.google.com
+  applicationLink: https://docs.google.com/forms/d/e/1FAIpQLSc9zLCouj116uGqsxBQQF_ygA4Ez4CDJ9_cjIFPu6TALCCngw/viewform
   note: AI-powered real-time interpretation and professional interpreters will be provided.
   images: []
 ---
