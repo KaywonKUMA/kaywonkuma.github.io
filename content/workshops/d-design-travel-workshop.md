@@ -12,7 +12,7 @@ ko:
   master: Matsuzoe Mitsuko (D&D 대표), D&D 편집부
   capacity: 15
   participants: 0
-  applicationLink: https://www.google.com
+  applicationLink: https://docs.google.com/forms/d/e/1FAIpQLSc9zLCouj116uGqsxBQQF_ygA4Ez4CDJ9_cjIFPu6TALCCngw/viewform
   note: AI 동시통역 시스템 및 전문 통역 지원
   images: []
 en:
@@ -28,7 +28,7 @@ en:
   master: Matsuzoe Mitsuko (Representative, D&DEPARTMENT), D&DEPARTMENT Editorial Team
   capacity: 15
   participants: 0
-  applicationLink: https://www.google.com
+  applicationLink: https://docs.google.com/forms/d/e/1FAIpQLSc9zLCouj116uGqsxBQQF_ygA4Ez4CDJ9_cjIFPu6TALCCngw/viewform
   note: AI-powered real-time interpretation and professional interpreters will be provided.
   images: []
 ---
