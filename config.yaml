@@ -6,7 +6,7 @@ pluralizeListTitles: false
 enableGitInfo: true
 pygmentsUseClasses: true
 disableHugoGeneratorInject: true
-baseURL: https://kaywonkuma.github.io/kuma
+baseURL: https://kaywonkuma.github.io
 
 date:
   locale: ko_KR
