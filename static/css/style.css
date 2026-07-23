@@ -784,6 +784,10 @@ main .exhibitions-item {
     border: 1px solid var(--line-color);
     padding: 5px 13px;
     user-select: none;
+    color: black;
+}
+
+.prev-button:hover, .next-button:hover {
     color: var(--point-color);
 }
 
