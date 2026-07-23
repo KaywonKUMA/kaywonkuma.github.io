@@ -10,7 +10,9 @@
     <meta name="description" content = "{{ $metatag.Params.description }}" />
     <meta name = "og:title" content = "{{ $metatag.Params.title }}" />
     <meta name="og:description" content = "{{ $metatag.Params.description }}" />
+    <meta property="og:image" content="{{ $metatag.Params.image }}" />
 
+    <link rel="icon" type="image/x-icon" href="{{ $metatag.Params.favicon }}" />
     <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 
     {{ with .OutputFormats.Get "rss" -}} {{ printf `

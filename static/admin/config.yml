@@ -531,6 +531,12 @@ collections:
             required: true
             hint: "링크 설명"
 
+          - label: 사진
+            name: image
+            widget: image
+            required: false
+            hint: "링크 미리보기 사진"
+
           - label: 파비콘
             name: favicon
             widget: image
