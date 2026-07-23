@@ -1,3 +1,14 @@
+const showWindow = (a) => {
+  let w = window.innerWidth * 0.5;
+  let h = window.innerHeight * 0.8;
+  window.open(
+      a.href,
+      'pdfwindow',
+      `width=${w},height=${h}`,
+  );
+  return false;
+}
+
 const setLanguage = (lang, button, container, type) => {
   container.dataset.language = lang;
   localStorage.setItem(`${type}-language`, lang);
@@ -94,11 +105,25 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
+  const sticker = document.querySelector(".sticker");
+  const newsItems = document.querySelectorAll(".news-item");
+
+  if (newsItems.length > 0) {
+    for (let i = 0; i < newsItems.length; i++){
+      const eachLink = newsItems[i].querySelector("a");
+
+      eachLink.addEventListener("click", (e) => {
+        e.preventDefault();
+        showWindow(eachLink)
+      });
+
+    }
+  }
+
+
   randomizeClockPosition();
   updateClocks();
   setInterval(updateClocks, 1000);
-
-  const sticker = document.querySelector(".sticker");
 
   if (sticker) {
     sticker.addEventListener("click", () => {
