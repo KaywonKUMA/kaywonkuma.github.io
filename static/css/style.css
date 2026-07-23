@@ -241,15 +241,12 @@ img {
 #kuma-exhibition,
 #kuma-resource,
 #kuma-news,
-#kuma-contact {
-    scroll-margin-top: var(--header-offset);
-}
-
+#kuma-contact,
 #exkuma-about,
 #exkuma-unsettled,
 #exkuma-workshop,
-#exkuma-news {
-    scroll-margin-top: calc(var(--header-offset) - 10px);
+#exkuma-news  {
+    scroll-margin-top: var(--header-offset);
 }
 
 .container.kuma[data-language="ko"] [data-lang="en"] {
