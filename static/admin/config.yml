@@ -374,6 +374,7 @@ collections:
         field:
           label: 카테고리
           name: category
+          i18n: duplicate
           widget: string
 
       - name: title
