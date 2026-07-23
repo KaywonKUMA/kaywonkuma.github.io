@@ -1,15 +1,15 @@
-{{- $page := site.GetPage (.page | default "/kuma-partners") -}}
+{{ $page := site.GetPage (.page | default "/kuma-partners") -}}
 
-{{- with $page }}
-  {{- with .Params.items }}
+{{ with $page }}
+  {{ with .Params.items }}
     <div class="logos-container">
-      {{- range . }}
+      {{ range . }}
         <img
           class="logo"
           src="{{ .logo | relURL }}"
           alt="{{ .name }}"
         />
-      {{- end }}
+      {{ end }}
     </div>
-  {{- end }}
-{{- end }}
+  {{ end }}
+{{ end }}

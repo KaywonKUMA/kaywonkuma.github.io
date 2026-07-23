@@ -784,6 +784,7 @@ main .exhibitions-item {
     border: 1px solid var(--line-color);
     padding: 5px 13px;
     user-select: none;
+    color: var(--point-color);
 }
 
 .prev-button {
