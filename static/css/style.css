@@ -1,71 +1,62 @@
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2") format("woff2");
     font-weight: 100;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2") format("woff2");
     font-weight: 200;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2") format("woff2");
     font-weight: 300;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2") format("woff2");
     font-weight: 400;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2") format("woff2");
     font-weight: 500;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2") format("woff2");
     font-weight: 600;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2") format("woff2");
     font-weight: 700;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2") format("woff2");
     font-weight: 800;
     font-display: swap;
 }
 
 @font-face {
     font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
-        format("woff2");
+    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2") format("woff2");
     font-weight: 900;
     font-display: swap;
 }
@@ -235,6 +226,7 @@ img {
 [data-lang] p:last-child {
     margin-bottom: 0;
 }
+
 /* 000000000 */
 
 #kuma-about,
@@ -245,7 +237,7 @@ img {
 #exkuma-about,
 #exkuma-unsettled,
 #exkuma-workshop,
-#exkuma-news  {
+#exkuma-news {
     scroll-margin-top: var(--header-offset);
 }
 
@@ -397,26 +389,28 @@ section {
     padding-bottom: 0;
 }
 
-section > [class$="-container"] {
-    border-bottom: 1px solid var(--line-color);
-    padding-top: var(--section-padding-y);
-    padding-bottom: var(--section-padding-y);
-}
-
-section > [class$="-container"]:last-child {
-    border-bottom: none;
-}
 
 .lang-button {
     cursor: pointer;
     user-select: none;
 }
 
-.container.ex-kuma section > [class$="-container"] {
+
+.container section>[class$="-container"] {
+    border-bottom: 1px solid var(--line-color);
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+}
+
+.container.ex-kuma section>[class$="-container"] {
     border-bottom: 1px solid var(--exkuma-text);
 }
 
-.container.ex-kuma section > .unsettled-container {
+.container section>[class$="-container"]:last-child {
+    border-bottom: 0px
+}
+
+.container.ex-kuma section>.unsettled-container {
     border-bottom: none;
     padding-bottom: 0;
 }
@@ -468,7 +462,7 @@ details summary {
     user-select: none;
 }
 
-details[open] > summary {
+details[open]>summary {
     margin-bottom: 30px;
 }
 
@@ -495,10 +489,10 @@ details[open] > summary {
     line-height: var(--line-tight);
 }
 
-.workshops-head > div,
-.exhibitions-head > div,
-.news-head > div,
-.resources-head > div {
+.workshops-head>div,
+.exhibitions-head>div,
+.news-head>div,
+.resources-head>div {
     padding: 0 6px 8px;
 }
 
@@ -544,29 +538,25 @@ main .exhibitions-item {
 
 .collections-item {
     grid-template-columns:
-        clamp(75px, 8vw, 95px)
-        auto
-        clamp(60px, 8vw, 90px);
+        clamp(75px, 8vw, 95px) auto clamp(60px, 8vw, 90px);
 }
 
 .committee-item {
     grid-template-columns:
-        clamp(75px, 8vw, 95px)
-        minmax(0, 1fr)
-        clamp(140px, 15vw, 180px);
+        clamp(75px, 8vw, 95px) minmax(0, 1fr) clamp(140px, 15vw, 180px);
 }
 
 .content {
     cursor: default;
 }
 
-.content > .image {
+.content>.image {
     border: 1px solid var(--exkuma-text);
     margin: 4px 0 18px;
     display: flex;
 }
 
-.content > .image img {
+.content>.image img {
     width: 100%;
     flex: 0 0 100%;
     object-fit: contain;
@@ -579,12 +569,12 @@ main .exhibitions-item {
     grid-template-columns: 86px minmax(0, 1fr);
 }
 
-.workshops-item > *,
-.exhibitions-item > *,
-.news-item > *,
-.resources-item > *,
-.collections-item > *,
-.committee-item > * {
+.workshops-item>*,
+.exhibitions-item>*,
+.news-item>*,
+.resources-item>*,
+.collections-item>*,
+.committee-item>* {
     min-height: var(--cell-min-height);
     padding-top: 10px;
     padding: var(--cell-padding);
@@ -594,8 +584,8 @@ main .exhibitions-item {
     background: transparent;
 }
 
-.workshops-item > .title,
-.exhibitions-item > .title {
+.workshops-item>.title,
+.exhibitions-item>.title {
     cursor: pointer;
 }
 
@@ -628,8 +618,8 @@ main .exhibitions-item {
     border-bottom: 1px solid var(--exkuma-text);
 }
 
-.container.ex-kuma .news-item > *,
-.workshops-item > * {
+.container.ex-kuma .news-item>*,
+.workshops-item>* {
     border-left: 1px solid var(--exkuma-text);
 }
 
@@ -697,13 +687,11 @@ main .exhibitions-item {
 }
 
 .container.kuma .past {
-    background: repeating-linear-gradient(
-        45deg,
-        black 0,
-        black 1px,
-        white 1px,
-        white 3px
-    );
+    background: repeating-linear-gradient(45deg,
+            black 0,
+            black 1px,
+            white 1px,
+            white 3px);
 }
 
 .container.ex-kuma .upcoming {
@@ -715,13 +703,11 @@ main .exhibitions-item {
 }
 
 .container.ex-kuma .past {
-    background: repeating-linear-gradient(
-        45deg,
-        var(--exkuma-text) 0px,
-        var(--exkuma-text) 1px,
-        white 1px,
-        white 3px
-    );
+    background: repeating-linear-gradient(45deg,
+            var(--exkuma-text) 0px,
+            var(--exkuma-text) 1px,
+            white 1px,
+            white 3px);
 }
 
 .exhibitions-grid .gallery {
@@ -784,7 +770,8 @@ main .exhibitions-item {
     color: black;
 }
 
-.prev-button:hover, .next-button:hover {
+.prev-button:hover,
+.next-button:hover {
     color: var(--point-color);
 }
 
@@ -812,6 +799,7 @@ main .exhibitions-item {
     gap: 20px;
     justify-content: center;
     align-items: center;
+    border-bottom: 0px;
 }
 
 .logos-container .logo {
@@ -864,7 +852,7 @@ main .exhibitions-item {
     border: 1px solid var(--exkuma-text);
 }
 
-.upcoming-item > .top > [data-lang] {
+.upcoming-item>.top>[data-lang] {
     grid-area: top;
     border-bottom: 1px solid var(--exkuma-text);
     padding: var(--section-gap);
@@ -873,25 +861,25 @@ main .exhibitions-item {
     gap: var(--section-gap);
 }
 
-.upcoming-item > .bottom {
+.upcoming-item>.bottom {
     grid-area: bottom;
     display: grid;
     grid-template-columns: 100%;
 }
 
-.upcoming-item > .bottom.apply {
+.upcoming-item>.bottom.apply {
     grid-template-columns: auto clamp(120px, 15vw, 170px);
 }
 
-.upcoming-item > .bottom > .left {
+.upcoming-item>.bottom>.left {
     padding: var(--section-gap);
 }
 
-.upcoming-item > .bottom > .left {
+.upcoming-item>.bottom>.left {
     border-right: 1px solid var(--exkuma-text);
 }
 
-.upcoming-item > .bottom > .right {
+.upcoming-item>.bottom>.right {
     display: flex;
 }
 
