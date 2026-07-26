@@ -4,18 +4,29 @@ document.addEventListener("DOMContentLoaded", () => {
   const collections = document.querySelectorAll(".collections-item");
   const exhibitions = document.querySelectorAll(".exhibition-item");
   const sliders = document.querySelectorAll(".gallery-slider");
-  const exhibitionItem = document.querySelectorAll(".exhibition-item");
+  const exhibitionItems = document.querySelectorAll(".exhibition-item");
 
-  for (let i = 0; i < exhibitionItem.length; i++){
-    const summary = exhibitionItem[i].querySelector("summary");
-    const description = exhibitionItem[i].querySelector(".description");
+  if(exhibitionItems.length > 0){
+    for (let i = 0; i < exhibitionItems.length; i++){
+      const detail = exhibitionItems[i];
+      const summary = exhibitionItems[i].querySelector("summary");
+      const description = exhibitionItems[i].querySelector(".description");
 
-    console.log(description)
+      if(!description){
+        summary.addEventListener("click", (e) => {
+          e.preventDefault();
+        })
+      } else {
+          detail.addEventListener("click", () => {
+            const arrow = detail.querySelector(".arrow");
 
-    if(!description){
-      summary.addEventListener("click", (e) => {
-        e.preventDefault();
-      })
+            if(detail.open){
+             arrow.innerText = "↓"
+            } else {
+              arrow.innerText = "↑"
+            }
+          })
+      }
     }
   }
 

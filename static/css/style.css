@@ -528,6 +528,11 @@ main .exhibitions-item {
     grid-template-columns: 12px calc(100% - 110px) 88px;
 }
 
+.exhibition-item summary title {
+    display: flex;
+    flex-direction: row;
+}
+
 .workshops-item summary {
     grid-template-columns: 100%;
 }
