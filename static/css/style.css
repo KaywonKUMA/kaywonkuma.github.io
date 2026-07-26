@@ -120,6 +120,7 @@ body {
     font-family: "Pretendard", sans-serif;
     font-size: var(--font-base);
     line-height: var(--line-base);
+    font-weight: 500;
     word-break: keep-all;
     color: black;
     background: white;
@@ -524,7 +525,7 @@ main .exhibitions-item {
 
 .exhibitions-item summary {
     display: grid;
-    grid-template-columns: 12px minmax(0, 1fr);
+    grid-template-columns: 12px calc(100% - 110px) 88px;
 }
 
 .workshops-item summary {
