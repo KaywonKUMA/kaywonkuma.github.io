@@ -4,6 +4,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const collections = document.querySelectorAll(".collections-item");
   const exhibitions = document.querySelectorAll(".exhibition-item");
   const sliders = document.querySelectorAll(".gallery-slider");
+  const exhibitionItem = document.querySelectorAll(".exhibition-item");
+
+  for (let i = 0; i < exhibitionItem.length; i++){
+    const summary = exhibitionItem[i].querySelector("summary");
+    const description = exhibitionItem[i].querySelector(".description");
+
+    console.log(description)
+
+    if(!description){
+      summary.addEventListener("click", (e) => {
+        e.preventDefault();
+      })
+    }
+  }
 
   kumaLangButton.addEventListener("click", () => {
     const now = leftContainer.dataset.language || "ko";

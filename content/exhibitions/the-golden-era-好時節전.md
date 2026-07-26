@@ -4,13 +4,13 @@ ko:
   type: '-'
   startDate: 2024-03-06
   endDate: 2024-03-19
-  description: '-'
+  description: ''
   images: []
 en:
   title: The Golden Era
   type: '-'
   startDate: 2024-03-06
   endDate: 2024-03-19
-  description: '-'
+  description: ''
   images: []
 ---

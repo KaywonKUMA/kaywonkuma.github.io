@@ -94,15 +94,21 @@
                                      </button>
                                  </div>
                                  {{ end }}
-                                 <div data-lang="ko">
-                                     {{ .Params.ko.description |
-                                     markdownify }}
-                                 </div>
+                                {{ if or .Params.ko.description .Params.en.description }}
+                                <div class="description">
+                                    {{ if .Params.ko.description }}
+                                    <div data-lang="ko">
+                                        {{ .Params.ko.description | markdownify }}
+                                    </div>
+                                    {{ end }}
 
-                                 <div data-lang="en">
-                                     {{ .Params.en.description |
-                                     markdownify }}
-                                 </div>
+                                    {{ if .Params.en.description }}
+                                    <div data-lang="en">
+                                        {{ .Params.en.description | markdownify }}
+                                    </div>
+                                    {{ end }}
+                                </div>
+                                {{ end }}
                              </div>
                          </details>
                      </div>

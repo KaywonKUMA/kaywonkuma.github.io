@@ -173,27 +173,27 @@ collections:
         label: 유형
         widget: string
         i18n: true
-        required: true
+        required: false
 
       - name: startDate
         label: 시작일
         widget: datetime
         type: date
         i18n: duplicate
-        required: true
+        required: false
 
       - name: endDate
         label: 종료일
         widget: datetime
         type: date
         i18n: duplicate
-        required: true
+        required: false
 
       - name: description
         label: 설명
         widget: markdown
         i18n: true
-        required: true
+        required: false
 
       - name: images
         label: 사진
