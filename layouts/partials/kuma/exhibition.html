@@ -1,107 +1,84 @@
- <div class="exhibition-container" id="kuma-exhibition">
-     <div class="section-title">Exhibition</div>
-     <div class="mark-container">
-         <span class="mark"><i class="current"></i>Current</span>
-         <span class="mark"><i class="upcoming"></i>Upcoming</span>
-         <span class="mark"><i class="past"></i>Past</span>
-     </div>
-     <div class="exhibition-list">
-         <div class="exhibitions-head">
-             <div class="type">Type</div>
-             <div class="title">Exhibitions</div>
-             <!--<div class="date">Date</div>-->
-         </div>
+<div class="exhibition-container" id="kuma-exhibition">
+    <div class="section-title">Exhibition</div>
+    <div class="mark-container">
+        <span class="mark"><i class="current"></i>Current</span>
+        <span class="mark"><i class="upcoming"></i>Upcoming</span>
+        <span class="mark"><i class="past"></i>Past</span>
+    </div>
+    <div class="exhibition-list">
+        <div class="exhibitions-head">
+            <div class="type">Type</div>
+            <div class="title">Exhibitions</div>
+            <!--<div class="date">Date</div>-->
+        </div>
 
-         <div class="exhibitions-grid">
-             {{ range sort (where site.RegularPages "Section"
-             "exhibitions") ".Params.ko.startDate" "desc" }}
-             <div class="exhibitions-item-container">
-                 <div class="exhibitions-item">
-                     <div class="type">
-                         <span data-lang="ko"
-                             >{{ .Params.ko.type }}</span
-                         >
-                         <span data-lang="en"
-                             >{{ .Params.en.type }}</span
-                         >
-                     </div>
+        <div class="exhibitions-grid">
+            {{ range sort (where site.RegularPages "Section"
+            "exhibitions") ".Params.ko.startDate" "desc" }}
+            <div class="exhibitions-item-container">
+                <div class="exhibitions-item">
+                    <div class="type">
+                        <span data-lang="ko">{{ .Params.ko.type }}</span>
+                        <span data-lang="en">{{ .Params.en.type }}</span>
+                    </div>
 
-                     <div class="title">
-                         <details class="exhibition-item">
-                             <summary>
-                                 {{ $now := now }} {{ $start := time
-                                 .Params.ko.startDate }} {{ $end := time
-                                 .Params.ko.endDate }} {{ if lt $now
-                                 $start }}
-                                 <span class="mark"
-                                     ><i class="upcoming"></i
-                                 ></span>
-                                 {{ else if and (ge $now $start) (le $now
-                                 $end) }}
-                                 <span class="mark"
-                                     ><i class="current"></i
-                                 ></span>
-                                 {{ else }}
-                                 <span class="mark"
-                                     ><i class="past"></i
-                                 ></span>
-                                 {{ end }}
+                    <div class="title">
+                        <details class="exhibition-item">
+                            <summary>
+                                {{ $now := now }} {{ $start := time
+                                .Params.ko.startDate }} {{ $end := time
+                                .Params.ko.endDate }} {{ if lt $now
+                                $start }}
+                                <span class="mark"><i class="upcoming"></i></span>
+                                {{ else if and (ge $now $start) (le $now
+                                $end) }}
+                                <span class="mark"><i class="current"></i></span>
+                                {{ else }}
+                                <span class="mark"><i class="past"></i></span>
+                                {{ end }}
 
-                                 <div class="title">
-                                    <span data-lang="ko"
-                                        >{{ .Params.ko.title }}
-                                        {{ if or .Params.ko.description .Params.en.description }}
-                                        <span class="arrow">↓</span>
-                                        {{ end }}
+                                <div class="title">
+                                    <span data-lang="ko">
+                                        {{ .Params.ko.title }}
                                     </span>
                                     <span data-lang="en">
                                         {{ .Params.en.title }}
-                                        {{ if or .Params.ko.description .Params.en.description }}
-                                        <span class="arrow">↓</span>
-                                        {{ end }}
                                     </span>
-                                 </div>
-                                 <div class="date">
-                                     {{ time.Format "2006.01.02"
-                                     .Params.ko.startDate }}
-                                 </div>
-                             </summary>
+                                    {{ if or .Params.ko.description .Params.en.description }}
+                                    <span class="arrow">↓</span>
+                                    {{ end }}
+                                </div>
+                                <div class="date">
+                                    {{ time.Format "2006.01.02"
+                                    .Params.ko.startDate }}
+                                </div>
+                            </summary>
 
-                             <div class="content">
-                                 {{ with .Params.ko.images }}
-                                 <div class="gallery-slider">
-                                     <button
-                                         class="prev-button"
-                                         type="button"
-                                     >
-                                         ‹
-                                     </button>
+                            <div class="content">
+                                {{ with .Params.ko.images }}
+                                <div class="gallery-slider">
+                                    <button class="prev-button" type="button">
+                                        ‹
+                                    </button>
 
-                                     <div class="gallery-track">
-                                         {{ range . }}
-                                         <div class="image-container">
-                                             <img
-                                                 src="{{ .image | relURL }}"
-                                                 loading="lazy"
-                                                 alt=""
-                                             />
-                                             <div class="image-credit">
-                                                 {{ with .credit }}
-                                                 &nbsp;©{{ . }}
-                                                 {{ end }}
-                                             </div>
-                                         </div>
-                                         {{ end }}
-                                     </div>
+                                    <div class="gallery-track">
+                                        {{ range . }}
+                                        <div class="image-container">
+                                            <img src="{{ .image | relURL }}" loading="lazy" alt="" />
+                                            <div class="image-credit">
+                                                {{ with .credit }}
+                                                &nbsp;©{{ . }}
+                                                {{ end }}
+                                            </div>
+                                        </div>
+                                        {{ end }}
+                                    </div>
 
-                                     <button
-                                         class="next-button"
-                                         type="button"
-                                     >
-                                         ›
-                                     </button>
-                                 </div>
-                                 {{ end }}
+                                    <button class="next-button" type="button">
+                                        ›
+                                    </button>
+                                </div>
+                                {{ end }}
                                 {{ if or .Params.ko.description .Params.en.description }}
                                 <div class="description">
                                     {{ if .Params.ko.description }}
@@ -117,18 +94,18 @@
                                     {{ end }}
                                 </div>
                                 {{ end }}
-                             </div>
-                         </details>
-                     </div>
-                 </div>
-             </div>
-             {{ end }}
-             <div class="exhibitions-item-container">
-                 <div class="exhibitions-item">
-                     <div class="type">...</div>
-                     <div class="title">2024년 이전 전시</div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+            <div class="exhibitions-item-container">
+                <div class="exhibitions-item">
+                    <div class="type">...</div>
+                    <div class="title">2024년 이전 전시</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
