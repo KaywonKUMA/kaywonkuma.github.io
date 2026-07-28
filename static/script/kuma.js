@@ -4,29 +4,28 @@ document.addEventListener("DOMContentLoaded", () => {
   const collections = document.querySelectorAll(".collections-item");
   const exhibitions = document.querySelectorAll(".exhibition-item");
   const sliders = document.querySelectorAll(".gallery-slider");
-  const exhibitionItems = document.querySelectorAll(".exhibition-item");
+  const exhibitionItems = document.querySelectorAll(".exhibition-item-container");
 
-  if(exhibitionItems.length > 0){
-    for (let i = 0; i < exhibitionItems.length; i++){
-      const detail = exhibitionItems[i];
-      const summary = exhibitionItems[i].querySelector("summary");
-      const description = exhibitionItems[i].querySelector(".description");
+  if (exhibitionItems.length > 0) {
+    for (let i = 0; i < exhibitionItems.length; i++) {
+      const toggle = exhibitionItems[i].querySelector(".top.toggle");
 
-      if(!description){
-        summary.addEventListener("click", (e) => {
-          e.preventDefault();
-        })
-      } else {
-          detail.addEventListener("click", () => {
-            const arrow = detail.querySelector(".arrow");
+      if (!toggle) continue;
 
-            if(detail.open){
-             arrow.innerText = "↓"
-            } else {
-              arrow.innerText = "↑"
-            }
-          })
-      }
+      toggle.addEventListener("click", () => {
+        const active = exhibitionItems[i].classList.contains("active");
+        const arrow = exhibitionItems[i].querySelector(".arrow");
+
+        for (let j = 0; j < exhibitionItems.length; j++) {
+          exhibitionItems[j].classList.remove("active");
+        }
+
+        exhibitionItems[i].classList.toggle("active", !active);
+
+        if (arrow) {
+          arrow.innerText = !active ? "↑" : "↓";
+        }
+      });
     }
   }
 
@@ -70,19 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   window.addEventListener("resize", bindCollectionsClick);
 
-  for (let i = 0; i < exhibitions.length; i++) {
-    const details = exhibitions[i];
-
-    details.addEventListener("toggle", () => {
-      if (!details.open) return;
-
-      exhibitions.forEach((other) => {
-        if (other !== details) {
-          other.open = false;
-        }
-      });
-    });
-  }
 
   for (let i = 0; i < sliders.length; i++) {
     const slider = sliders[i];

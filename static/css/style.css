@@ -298,7 +298,7 @@ main {
 .container header {
     position: sticky;
     top: 0;
-    z-index: 10;
+    z-index: 100;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -519,7 +519,7 @@ main .exhibitions-item {
 }
 
 .exhibitions-head,
-.exhibitions-item {
+.exhibitions-item- {
     grid-template-columns: clamp(90px, 15vw, 200px) minmax(0, 1fr);
 }
 
@@ -576,7 +576,8 @@ main .exhibitions-item {
 }
 
 .workshops-item>*,
-.exhibitions-item>*,
+.exhibition-item-container .top>*,
+.exhibition-item-container .bottom>*,
 .news-item>*,
 .resources-item>*,
 .collections-item>*,
@@ -584,19 +585,19 @@ main .exhibitions-item {
     min-height: var(--cell-min-height);
     padding-top: 10px;
     padding: var(--cell-padding);
-    border-left: 1px solid var(--line-color);
     font-size: var(--font-base);
     line-height: var(--line-base);
     background: transparent;
+    border-left: 1px solid var(--line-color);
 }
 
 .workshops-item>.title,
-.exhibitions-item>.title {
+.exhibition-item>.title {
     cursor: pointer;
 }
 
 .workshops-item-container,
-.exhibitions-item-container,
+.exhibition-item-container,
 .news-item-container,
 .resources-item-container,
 .collections-item-container,
@@ -605,7 +606,7 @@ main .exhibitions-item {
 }
 
 .workshops-item,
-.exhibitions-item,
+.exhibition-item-container .top,
 .news-item,
 .resources-item,
 .collections-item,
@@ -617,6 +618,62 @@ main .exhibitions-item {
     position: relative;
     overflow: visible;
     cursor: default;
+}
+
+.exhibition-item-container .top {
+    display: grid;
+    grid-template-columns:
+        clamp(75px, 8vw, 95px)
+        minmax(0, 1fr)
+        clamp(100px, 10vw, 150px);
+}
+
+.exhibition-item-container .top .title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.exhibition-item-container .top .title.clickable > *:not(.mark) {
+    cursor: pointer;
+}
+
+.exhibition-item-container .top .title.clickable:hover {
+    color: var(--point-color);
+}
+
+.exhibition-item-container .top .title > span {
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    min-width: 0;
+
+}
+
+.exhibition-item-container .top .arrow {
+    margin-left: auto;
+    flex: 0 0 auto;
+    font-size: var(--font-base);
+    line-height: 1;
+}
+
+.exhibition-item-container .bottom {
+    display: none;
+}
+
+.exhibition-item-container .content > :first-child {
+    margin-top: 30px;
+}
+
+.exhibition-item-container.active .bottom {
+    display: grid;
+    grid-template-columns: clamp(75px, 8vw, 95px) auto;
 }
 
 .container.ex-kuma .news-head,
@@ -674,6 +731,7 @@ main .exhibitions-item {
     display: inline-flex;
     align-items: center;
     gap: 4px;
+    flex-shrink: 0;
 }
 
 .container .mark i {
@@ -682,6 +740,10 @@ main .exhibitions-item {
     height: 12px;
     border: 1px solid var(--line-color);
     flex: 0 0 auto;
+}
+
+.title .arrow {
+    flex-shrink: 0;
 }
 
 .container.kuma .upcoming {
