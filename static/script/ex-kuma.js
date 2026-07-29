@@ -53,7 +53,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  const selected = colorThemes[Math.floor(Math.random() * colorThemes.length)];
+  let selected;
+
+  const isHome = location.pathname === "/";
+  const isExKuma = location.pathname === "/ex-kuma/";
+
+  if (isExKuma) {
+    const saved = sessionStorage.getItem("exkuma-theme");
+
+    if (saved) {
+      selected = JSON.parse(saved);
+      sessionStorage.removeItem("exkuma-theme");
+    } else {
+      selected = colorThemes[Math.floor(Math.random() * colorThemes.length)];
+    }
+  } else {
+    selected = colorThemes[Math.floor(Math.random() * colorThemes.length)];
+
+    if (isHome) {
+      sessionStorage.setItem("exkuma-theme", JSON.stringify(selected));
+    }
+  }
 
   rightContainer.style.setProperty("--exkuma-bg", selected.bg);
   rightContainer.style.setProperty("--exkuma-text", selected.text);
