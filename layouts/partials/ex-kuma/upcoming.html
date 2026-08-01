@@ -82,9 +82,7 @@
             </div>
             <div class="date">
               Date & Time :
-              {{ time .Params.en.startDate | time.Format "2006. 01.
-                02"
-              }}
+              {{ time .Params.en.startDate | time.Format "2006. 01. 02" }}
               &mdash;
               {{ time .Params.en.endDate | time.Format "01. 02" }}
               {{ if .Params.en.startTime }}
