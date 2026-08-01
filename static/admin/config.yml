@@ -3,24 +3,18 @@ backend:
   repo: KaywonKUMA/kaywonkuma.github.io
   branch: main
   base_url: https://sveltia-cms-auth.kuma-d9d.workers.dev
-
 # backend:
 #   name: test-repo
-
 app_title: KUMA
-
 logo:
   src: ../assets/logo.png
   show_in_header: true
-
 i18n:
   structure: single_file
   locales: [ko, en]
   default_locale: ko
-
 media_folder: /static/assets
 public_folder: /assets
-
 media_libraries:
   default:
     config:
@@ -32,7 +26,6 @@ media_libraries:
           height: 1200
         svg:
           optimize: true
-
 collections:
   - name: kuma-about
     label: KUMA About
@@ -48,114 +41,96 @@ collections:
             widget: image
             i18n: duplicate
             required: true
-
           - label: 소개
             name: description
             widget: richtext
             i18n: true
             required: true
-
   - label: KUMA 운영위원회
     name: committee
     i18n: true
-
     files:
       - label: 운영위원회
         name: committee
         file: content/committee.md
         i18n: true
-
         fields:
           - label: 운영위원 목록
             name: items
             widget: list
             i18n: true
-
             fields:
               - label: 직책
                 name: role
                 widget: string
                 i18n: true
-
               - label: 이름
                 name: name
                 widget: string
                 i18n: true
-
               - label: 소속
                 name: affiliation
                 widget: string
                 i18n: true
-
   - label: KUMA 대표 소장품
     name: collections
     i18n: true
-
     files:
       - label: 대표 소장품
         name: collections
         file: content/collections.md
         i18n: true
-
         fields:
           - label: 작품 목록
             name: items
             widget: list
             i18n: true
             summary: "{{fields.artist}} · {{fields.title}}"
-
             fields:
               - label: 사진
                 name: image
                 widget: image
                 i18n: duplicate
-
               - label: 분류
                 name: category
                 widget: string
                 i18n: true
-
               - label: 작가
                 name: artist
                 widget: string
                 i18n: true
-
               - label: 작품명
                 name: title
                 widget: string
                 i18n: true
-
               - label: 규격
                 name: size
                 widget: string
                 i18n: true
-
               - label: 제작연도
                 name: year
                 widget: number
                 i18n: duplicate
-
-          # - label: 기타 링크
-          #   name: etc_items
-          #   widget: list
-          #   i18n: true
-          #   summary: "{{fields.title}} · {{fields.link}}"
-          #   fields:
-          #     - label: 제목
-          #       name: title
-          #       widget: string
-          #       hint: PDF 등
-          #       i18n: true
-          #       required: false
-
-          #     - label: 링크
-          #       name: link
-          #       widget: string
-          #       hint: Google Drive 공유 링크 등
-          #       i18n: duplicate
-          #       required: false
-
+                # - label: 기타 링크
+                #   name: etc_items
+                #   widget: list
+                #   i18n: true
+                #   summary: "{{fields.title}} · {{fields.link}}"
+                #   fields:
+                #     - label: 제목
+                #       name: title
+                #       widget: string
+                #       hint: PDF 등
+                #       i18n: true
+                #       required: false
   - name: exhibitions
+    #     - label: 링크
+    #       name: link
+    #       widget: string
+    #       hint: Google Drive 공유 링크 등
+    #       i18n: duplicate
+    #       required: false
+
     label: KUMA Exhibitions
     folder: /content/exhibitions
     create: true
@@ -168,33 +143,28 @@ collections:
         widget: string
         i18n: true
         required: true
-
       - name: type
         label: 유형
         widget: string
         i18n: true
         required: false
-
       - name: startDate
         label: 시작일
         widget: datetime
         type: date
         i18n: duplicate
         required: false
-
       - name: endDate
         label: 종료일
         widget: datetime
         type: date
         i18n: duplicate
         required: false
-
       - name: description
         label: 설명
         widget: markdown
         i18n: true
         required: false
-
       - name: images
         label: 사진
         widget: list
@@ -204,29 +174,24 @@ collections:
           - name: image
             label: 이미지
             widget: image
-
           - name: credit
             label: 크레딧
             widget: string
             required: false
-
   - label: KUMA Resources
     name: resources
     i18n: true
-
     files:
       - label: Resources
         name: resources
         file: content/resources.md
         i18n: true
-
         fields:
           - label: 자료 목록
             name: items
             widget: list
             i18n: true
             summary: "{{fields.type}} · {{fields.title}}"
-
             fields:
               - label: 형식
                 name: type
@@ -234,21 +199,18 @@ collections:
                 hint: PDF 등
                 i18n: true
                 required: false
-
               - label: 제목
                 name: title
                 widget: string
                 hint: 대관신청서 등
                 i18n: true
                 required: false
-
               - label: 링크
                 name: link
                 widget: string
                 hint: Google Drive 공유 링크 등
                 i18n: duplicate
                 required: false
-
   - name: kuma-news
     label: KUMA News
     folder: /content/kuma-news
@@ -256,25 +218,21 @@ collections:
     media_folder: "{{media_folder}}/kuma-news/{{slug}}"
     public_folder: "{{public_folder}}/kuma-news/{{slug}}"
     i18n: true
-
     fields:
       - name: type
         label: 형식
         widget: string
         hint: 보도자료 등
         i18n: true
-
       - name: title
         label: 제목
         widget: string
         i18n: true
-
       - name: link
         label: 링크
         widget: string
         hint: https:// 로 시작하는 URL
         i18n: duplicate
-
   - name: kuma-partners
     label: KUMA 협력사
     files:
@@ -291,14 +249,11 @@ collections:
                 name: name
                 widget: string
                 hint: 협력사 이름
-
               - label: 로고
                 name: logo
                 widget: image
                 hint: 협력사 로고 이미지
-
   - divider: true
-
   - name: exkuma-sticker
     label: EX-KUMA Sticker
     i18n: true
@@ -314,7 +269,6 @@ collections:
             i18n: true
             required: false
             hint: "내용을 비워두면 스티커가 표시되지 않습니다."
-
   - name: exkuma-about
     label: EX-KUMA About
     i18n: true
@@ -329,14 +283,12 @@ collections:
             widget: image
             i18n: duplicate
             required: true
-
           - label: 소개
             name: description
             widget: text
             i18n: true
             required: true
             hint: Unsettled 란?
-
   - name: exkuma-unsettled
     label: EX-KUMA Unsettled
     i18n: true
@@ -351,13 +303,11 @@ collections:
             widget: text
             i18n: true
             required: true
-
           - label: 포스터
             name: poster
             widget: image
             i18n: duplicate
             required: false
-
   - name: exkuma-workshops
     label: EX-KUMA Workshops
     folder: /content/workshops
@@ -376,51 +326,43 @@ collections:
           name: category
           i18n: duplicate
           widget: string
-
       - name: title
         label: 제목
         widget: string
         i18n: true
         required: true
-
       - name: description
         label: 설명
         widget: markdown
         i18n: true
         required: true
-
       - name: startDate
         label: 시작 날짜
         widget: datetime
         type: date
         i18n: duplicate
         required: true
-
       - name: endDate
         label: 종료 날짜
         widget: datetime
         type: date
         i18n: duplicate
         required: true
-
       - name: startTime
         label: 시작 시간
         widget: datetime
         type: time
         required: false
-
       - name: endTime
         label: 종료 시간
         widget: datetime
         type: time
         required: false
-
       - name: master
         label: 마스터
         widget: string
         i18n: true
         required: false
-
       - name: capacity
         label: 모집 인원
         widget: number
@@ -428,7 +370,6 @@ collections:
         min: 0
         i18n: duplicate
         required: false
-
       - name: participants
         label: 참여 인원
         widget: number
@@ -436,19 +377,16 @@ collections:
         min: 0
         i18n: duplicate
         required: false
-
       - name: applicationLink
         label: 신청 링크
         widget: string
         i18n: duplicate
         required: false
-
       - name: note
         label: 특이사항
         widget: string
         i18n: true
         required: false
-
       - name: images
         label: 사진
         widget: list
@@ -458,12 +396,10 @@ collections:
           - name: image
             label: 이미지
             widget: image
-
           - name: credit
             label: 크레딧
             widget: string
             required: false
-
   - name: exkuma-news
     label: EX-KUMA News
     folder: /content/exkuma-news
@@ -477,18 +413,15 @@ collections:
         widget: string
         i18n: true
         hint: 보도자료 등
-
       - name: title
         label: 제목
         widget: string
         i18n: true
-
       - name: link
         label: 링크
         widget: string
         hint: https:// 로 시작하는 URL
         i18n: duplicate
-
   - name: exkuma-partners
     label: EX-KUMA 협력사
     files:
@@ -505,14 +438,11 @@ collections:
                 name: name
                 widget: string
                 hint: 협력사 이름
-
               - label: 로고
                 name: logo
                 widget: image
                 hint: 협력사 로고 이미지
-
   - divider: true
-
   - name: metatag
     label: 메타태그
     files:
@@ -525,19 +455,16 @@ collections:
             widget: string
             required: true
             hint: "링크 제목"
-
           - label: 설명
             name: description
             widget: string
             required: true
             hint: "링크 설명"
-
           - label: 사진
             name: image
             widget: image
             required: false
             hint: "링크 미리보기 사진"
-
           - label: 파비콘
             name: favicon
             widget: image

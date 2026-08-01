@@ -1,36 +1,38 @@
 <head>
-    <meta charset="UTF-8" />
-    <!--<meta name="viewport" content="width=1200" />-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <!--<meta name="viewport" content="width=1200" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{{ .Title }}</title>
-    {{ $metatag := site.GetPage "/metatag" }}
+  <title>{{ .Title }}</title>
+  {{ $metatag := site.GetPage "/metatag" }}
 
-    <meta name = "title" content = "{{ $metatag.Params.title }}" />
-    <meta name="description" content = "{{ $metatag.Params.description }}" />
-    <meta name = "og:title" content = "{{ $metatag.Params.title }}" />
-    <meta name="og:description" content = "{{ $metatag.Params.description }}" />
-    <meta property="og:image" content="{{ $metatag.Params.image }}" />
 
-    <link rel="icon" type="image/x-icon" href="{{ $metatag.Params.favicon }}" />
-    <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+  <meta name="title" content="{{ $metatag.Params.title }}" />
+  <meta name="description" content="{{ $metatag.Params.description }}" />
+  <meta name="og:title" content="{{ $metatag.Params.title }}" />
+  <meta name="og:description" content="{{ $metatag.Params.description }}" />
+  <meta property="og:image" content="{{ $metatag.Params.image }}" />
 
-    {{ with .OutputFormats.Get "rss" -}} {{ printf `
-    <link rel="%s" type="%s" href="%s" title="%s" />
-    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
-    <script
-        defer
-        src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"
-    ></script>
-    <script defer src="/script/global.js"></script>
-    {{ if .IsHome }}
+  <link rel="icon" type="image/x-icon" href="{{ $metatag.Params.favicon }}" />
+  <link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
+
+  {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `
+      <link rel="%s" type="%s" href="%s" title="%s" />
+      ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML
+    }}
+  {{ end -}}
+  <script
+    defer
+    src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"
+  ></script>
+  <script defer src="/script/global.js"></script>
+  {{ if .IsHome }}
     <script defer src="/script/kuma.js"></script>
     <script defer src="/script/ex-kuma.js"></script>
-
-    {{ else if eq .Layout "kuma" }}
+  {{ else if eq .Layout "kuma" }}
     <script defer src="/script/kuma.js"></script>
-
-    {{ else if eq .Layout "ex-kuma" }}
+  {{ else if eq .Layout "ex-kuma" }}
     <script defer src="/script/ex-kuma.js"></script>
-    {{ end }}
+  {{ end }}
 </head>

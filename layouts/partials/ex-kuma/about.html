@@ -1,16 +1,12 @@
 <div class="about-container" id="exkuma-about">
-    {{ $about := site.GetPage "/exkuma-about" }}
-    <div>
-        <img src="{{ $about.Params.ko.image }}" alt="" />
-    </div>
+  {{ $about := site.GetPage "/exkuma-about" }}
+  <div>
+    <img src="{{ $about.Params.ko.image }}" alt="" />
+  </div>
 
-    <br />
+  <br />
 
-    <div class="section-title">About</div>
-    <div data-lang="ko">
-        {{ $about.Params.ko.description | markdownify }}
-    </div>
-    <div data-lang="en">
-        {{ $about.Params.en.description | markdownify }}
-    </div>
+  <div class="section-title">About</div>
+  <div data-lang="ko">{{ $about.Params.ko.description | markdownify }}</div>
+  <div data-lang="en">{{ $about.Params.en.description | markdownify }}</div>
 </div>

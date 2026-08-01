@@ -7,34 +7,27 @@ enableGitInfo: true
 pygmentsUseClasses: true
 disableHugoGeneratorInject: true
 baseURL: https://kuma.kaywon.ac.kr
-
 date:
   locale: ko_KR
 timeZone: Asia/Seoul
-
 buildFuture: true
-
 uglyURLs: false
 canonifyURLs: true
-
 markup:
   goldmark:
     renderer:
       unsafe: true
       hardWraps: true
-
   highlight:
     guessSyntax: true
     lineNumbersInTable: false
     tabWidth: 4
-
 menu:
   main:
     - identifier: kuma
       name: kuma
       url: /kuma.html
       weight: 1
-
     - identifier: ex-kuma
       name: ex-kuma
       url: /ex-kuma.html

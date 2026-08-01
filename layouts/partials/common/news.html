@@ -1,39 +1,39 @@
 <div class="news-container" id="{{ .id }}">
-    <div class="section-title">News</div>
-    <div class="news-list">
-        <div class="news-head">
-            <div class="type">Type</div>
-            <div class="title">Title</div>
-        </div>
-        <div class="news-grid">
-            <div data-lang="ko">
-                {{ range where site.RegularPages "Section" (.section) }}
-                <div class="news-item-container">
-                    <div class="news-item">
-                        <div class="type">{{ .Params.ko.type }}</div>
-                        <div class="title">
-                            <a href="{{ .Params.ko.link }}">
-                                {{ .Params.ko.title }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-            <div data-lang="en">
-                {{ range where site.RegularPages "Section" (.section) }}
-                <div class="news-item-container">
-                    <div class="news-item">
-                        <div class="type">{{ .Params.en.type }}</div>
-                        <div class="title">
-                            <a href="{{ .Params.en.link }}">
-                                {{ .Params.en.title }}
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-        </div>
+  <div class="section-title">News</div>
+  <div class="news-list">
+    <div class="news-head">
+      <div class="type">Type</div>
+      <div class="title">Title</div>
     </div>
+    <div class="news-grid">
+      <div data-lang="ko">
+        {{ range where site.RegularPages "Section" (.section) }}
+          <div class="news-item-container">
+            <div class="news-item">
+              <div class="type">{{ .Params.ko.type }}</div>
+              <div class="title">
+                <a href="{{ .Params.ko.link }}">
+                  {{ .Params.ko.title }}
+                </a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+      <div data-lang="en">
+        {{ range where site.RegularPages "Section" (.section) }}
+          <div class="news-item-container">
+            <div class="news-item">
+              <div class="type">{{ .Params.en.type }}</div>
+              <div class="title">
+                <a href="{{ .Params.en.link }}">
+                  {{ .Params.en.title }}
+                </a>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
 </div>

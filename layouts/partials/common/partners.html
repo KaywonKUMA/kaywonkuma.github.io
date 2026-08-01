@@ -4,11 +4,7 @@
   {{ with .Params.items }}
     <div class="logos-container">
       {{ range . }}
-        <img
-          class="logo"
-          src="{{ .logo | relURL }}"
-          alt="{{ .name }}"
-        />
+        <img class="logo" src="{{ .logo | relURL }}" alt="{{ .name }}" />
       {{ end }}
     </div>
   {{ end }}

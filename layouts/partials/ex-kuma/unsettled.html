@@ -1,17 +1,20 @@
 <div class="unsettled-container" id="exkuma-unsettled">
-    {{ $unsettled := site.GetPage "/exkuma-unsettled" }} {{ if
-    $unsettled.Params.ko.poster }}
+  {{ $unsettled := site.GetPage "/exkuma-unsettled" }}
+  {{ if
+    $unsettled.Params.ko.poster
+  }}
     <div class="poster-container">
-        <img src="{{ $unsettled.Params.ko.poster }}" alt="Unsettled poster" />
+      <img src="{{ $unsettled.Params.ko.poster }}" alt="Unsettled poster" />
     </div>
-    {{ end }}
+  {{ end }}
 
-    <div class="unsettled-about">
-        <div class="section-title">
-            Unsettled <span class="unsettled-year"></span>
-        </div>
-        {{ partial "ex-kuma/upcoming.html" . }}
+
+  <div class="unsettled-about">
+    <div class="section-title">
+      Unsettled <span class="unsettled-year"></span>
     </div>
+    {{ partial "ex-kuma/upcoming.html" . }}
+  </div>
 </div>
 
 {{ partial "ex-kuma/workshops.html" . }}

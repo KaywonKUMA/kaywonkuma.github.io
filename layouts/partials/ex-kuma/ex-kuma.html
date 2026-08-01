@@ -1,28 +1,34 @@
 <div class="container ex-kuma">
-    {{ partial "common/clock.html" (dict "id" "local-clock" "class"
-    "clock-right" ) }}
-    <header>
-        <div>
-            <a href="/ex-kuma" class="title">EX-KUMA</a>
-        </div>
-        <nav>
-            <a href="#exkuma-about">ABOUT</a>
-            <a href="#exkuma-unsettled">UNSETTLED</a>
-            <a href="#exkuma-workshop">WORKSHOP</a>
-            <a href="#exkuma-news">NEWS</a>
-            <a><span class="lang-button ex-kuma">EN</span></a>
-        </nav>
-    </header>
-
-    {{ partial "ex-kuma/sticker.html" . }}
-
-    <section>
-        {{ partial "ex-kuma/about.html" . }} {{ partial "ex-kuma/unsettled.html"
-        . }} {{ partial "common/news.html" (dict "id" "exkuma-news" "section"
-        "exkuma-news" ) }} {{ partial "common/partners.html" (dict "page"
-        "/exkuma-partners") }}
-    </section>
-    <div class="bottom-img-container">
-        <img class="bottom-img" src="/assets/exkuma02.jpg" alt="EX-KUMA" />
+  {{ partial "common/clock.html" (dict "id" "local-clock" "class" "clock-right"
+    )
+  }}
+  <header>
+    <div>
+      <a href="/ex-kuma" class="title">EX-KUMA</a>
     </div>
+    <nav>
+      <a href="#exkuma-about">ABOUT</a>
+      <a href="#exkuma-unsettled">UNSETTLED</a>
+      <a href="#exkuma-workshop">WORKSHOP</a>
+      <a href="#exkuma-news">NEWS</a>
+      <a><span class="lang-button ex-kuma">EN</span></a>
+    </nav>
+  </header>
+
+  {{ partial "ex-kuma/sticker.html" . }}
+
+
+  <section>
+    {{ partial "ex-kuma/about.html" . }}
+    {{ partial "ex-kuma/unsettled.html" . }}
+    {{ partial "common/news.html" (dict "id" "exkuma-news" "section"
+      "exkuma-news" )
+    }}
+    {{ partial "common/partners.html" (dict "page"
+      "/exkuma-partners")
+    }}
+  </section>
+  <div class="bottom-img-container">
+    <img class="bottom-img" src="/assets/exkuma02.jpg" alt="EX-KUMA" />
+  </div>
 </div>
