@@ -54,7 +54,7 @@ en:
     - role: Member
       name: Professor Hyojin Yoon
       affiliation: Department of Exhibition Content Design
-    - role: Member
+    - role: External Member
       name: Professor Young Jun Lee
       affiliation: College of Liberal Arts, Seoul National University of Science and Technology
     - role: Administrative Support
