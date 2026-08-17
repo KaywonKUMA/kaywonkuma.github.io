@@ -4,4 +4,6 @@ items:
     logo: /assets/ofm.png
   - name: Boisbuchet
     logo: /assets/boisbuchet.png
+  - name: Boisbuchet
+    logo: /assets/Notpla.webp
 ---
