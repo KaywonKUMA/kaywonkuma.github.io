@@ -25,8 +25,8 @@ ko:
     - role: 위원
       name: 윤효진 교수
       affiliation: 전시콘텐츠디자인과
-    - role: 위원
-      name: 이영준 외부의원
+    - role: 외부위원
+      name: 이영준 교수
       affiliation: 서울과학기술대학교 융합교양학부
     - role: 행정지원
       name: 오정석 팀장
