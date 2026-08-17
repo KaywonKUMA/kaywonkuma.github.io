@@ -46,6 +46,9 @@ en:
       name: Professor Hyungkeun Oh
       affiliation: Department of Photography
     - role: Member
+      name: Professor Teresa Cho
+      affiliation: Department of Game Media
+    - role: Member
       name: Professor Seulgi Choi
       affiliation: Department of Visual Design
     - role: Member
