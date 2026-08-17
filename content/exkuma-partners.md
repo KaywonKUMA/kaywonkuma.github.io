@@ -1,9 +1,9 @@
 ---
 items:
-  - name: 온양미술박물관
-    logo: /assets/ofm.png
   - name: Boisbuchet
     logo: /assets/boisbuchet.png
-  - name: Boisbuchet
+  - name: Notpla
     logo: /assets/Notpla.webp
+  - name: 온양미술박물관
+    logo: /assets/ofm.png
 ---
