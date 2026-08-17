@@ -34,8 +34,8 @@ ko:
 en:
   items:
     - role: Chair
-      name: Director Jungsim Choi
-      affiliation: Department of Exhibition Content Design
+      name: Director Ahyoung Song
+      affiliation: Department of Floral Design
     - role: Member
       name: Professor (Curator) Seungcheol Hong
       affiliation: Department of Fine Art
