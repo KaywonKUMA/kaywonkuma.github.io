@@ -1,11 +1,20 @@
 ---
 ko:
   description: |-
-    KAYWON UNSETTLED 국제공동워크숍은 국내외 예술기관과 계원예술대학교가 함께하는 국제 협력 프로그램입니다. 올해는 UNFOLDING THE FOREST를 주제로 자연과 지역을 탐구하여 예술적 협업을 이어갑니다.
+    KAYWON UNSETTLED는 KUMA가 기획하는 국제공동 프로젝트로, 서로 다른 장소와 배경에서 활동하는 창작자와 학생이 만나 함께 배우고 새로운 가능성을 발견하는 과정입니다.
 
-    UNSETTLED는 계원예술대학교가 새롭게 론칭한 국제 워크숍 프로그램입니다. UNSETTLED 2026은 자연주의적 관점에 바탕을 둔 워크숍 시리즈로, 자연을 고정된 대상이 아닌, ‘불안정하며 끊임없이 진화하는 조건’으로 탐구하며 예술적 실험과 창작 실천의 새로운 지평을 열고자 합니다. 국내외 협력 기관들과의 공동 기획으로 개발된 UNSETTLED 2026은 각 참여 지역의 고유한 환경과 소통하는 장소 특정적(Site-specific) 워크숍을 중심으로 구성됩니다. 참가자들은 관찰과 수집, 기억과 기록의 과정을 거쳐 자신들의 생생한 경험을 예술적 창작으로 치환합니다. 특히 결과물보다는 과정에 가치를 두며, 리서치와 기록, 그리고 경험적 탐구 그 자체를 핵심적인 예술 실천으로 설정합니다. 시각 디자인, 설치 미술, 퍼포먼스, 순수 미술, 무빙 이미지, 애니메이션 등 다양한 분야의 전문가(Masters)들이 학생 및 일반인들과 함께 참여합니다. 이들은 서로의 관점이 교차하는 창의적 교류의 장을 형성합니다. UNSETTLED는 교육 플랫폼이자 동시에 예술적 실험으로서, 국제적 맥락 속 자연과 인간의 지각, 그리고 현대 창작 실천 사이의 관계에 대해 비판적인 질문을 던집니다.
+    KUMA는 전시를 통해 결과물을 선보이는 데 그치지 않고, 다양한 문화와 창작 환경을 연결하는 교육과 협업의 과정을 함께 만들어가고 있습니다. KAYWON UNSETTLED 역시 이러한 과정의 하나로, 해외의 다양한 분야의 마스터와 학생들이 만나워크숍을 진행하고, 그 경험을 다시 전시와 기록으로 확장해 나갑니다.
+
+    올해는 세 개의 국제공동워크숍을 통해 서로 다른 분야의 마스터와 학생들이 함께 작업하며 새로운 경험을 만들고 있습니다. 워크숍에서 시작된 질문과 실험은 이후 KUMA에서 결과 전시로 이어질 예정입니다. (11월 예정)
+
+    하나의 만남에서 시작된 경험이 워크숍과 전시, 기록을 거치며 또 다른 만남으로 이어지는 것. KAYWON UNSETTLED는 이러한 과정을 통해 교육과 창작의 새로운 가능성을 만들어가는 방식을 탐색합니다.
   poster: ''
 en:
-  description: The 2026 KAYWON UNSETTLED International Workshop is an international collaboration program jointly organized by Kaywon University of Art & Design and leading art and cultural institutions from Korea and abroad. Under this year's theme, UNFOLDING THE FOREST, participants will explore nature and local communities through creative collaboration and artistic research.
+  description: |-
+    KAYWON UNSETTLED is an international collaborative project initiated by KUMA, bringing together creators and students from different places and backgrounds to learn from one another and discover new possibilities. Rather than simply presenting completed works through exhibitions, KUMA creates opportunities for education and collaboration that connect diverse cultures, creative practices, and environments.
+
+    KAYWON UNSETTLED is part of this ongoing process. Masters from various fields and students from Kaywon University of Art & Design come together through international workshops, where they share knowledge, experiment, and explore new ideas. These experiences are then expanded through exhibitions and documentation.
+
+    This year, three international collaborative workshops are bringing together masters and students from different fields to work alongside one another and create new experiences. The questions and experiments that emerge from these workshops will continue into an exhibition at KUMA, scheduled for November. An experience that begins with a single encounter develops through workshops, exhibitions, and documentation, leading to new encounters and possibilities. Through KAYWON UNSETTLED, KUMA explores new ways of connecting education and creative practice, and of creating possibilities that emerge through collaboration.
   poster: ''
 ---
