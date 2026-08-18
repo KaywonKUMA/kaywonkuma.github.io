@@ -137,6 +137,11 @@ collections:
     media_folder: "{{media_folder}}/exhibitions/{{slug}}"
     public_folder: "{{public_folder}}/exhibitions/{{slug}}"
     i18n: true
+    sortable_fields:
+      - title
+      - startDate
+      - endDate
+
     fields:
       - name: title
         label: 제목
@@ -253,7 +258,9 @@ collections:
                 name: logo
                 widget: image
                 hint: 협력사 로고 이미지
+
   - divider: true
+
   - name: exkuma-sticker
     label: EX-KUMA Sticker
     i18n: true
@@ -269,6 +276,7 @@ collections:
             i18n: true
             required: false
             hint: "내용을 비워두면 스티커가 표시되지 않습니다."
+
   - name: exkuma-about
     label: EX-KUMA About
     i18n: true
@@ -289,6 +297,7 @@ collections:
             i18n: true
             required: true
             hint: Unsettled 란?
+
   - name: exkuma-unsettled
     label: EX-KUMA Unsettled
     i18n: true
@@ -308,6 +317,7 @@ collections:
             widget: image
             i18n: duplicate
             required: false
+
   - name: exkuma-workshops
     label: EX-KUMA Workshops
     folder: /content/workshops
@@ -315,6 +325,12 @@ collections:
     media_folder: "{{media_folder}}/workshops/{{slug}}"
     public_folder: "{{public_folder}}/workshops/{{slug}}"
     i18n: true
+
+    sortable_fields:
+      - title
+      - startDate
+      - endDate
+
     fields:
       - name: category
         label: 카테고리
@@ -400,6 +416,7 @@ collections:
             label: 크레딧
             widget: string
             required: false
+
   - name: exkuma-news
     label: EX-KUMA News
     folder: /content/exkuma-news
