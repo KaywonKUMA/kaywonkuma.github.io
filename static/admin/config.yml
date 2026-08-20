@@ -398,6 +398,13 @@ collections:
         widget: string
         i18n: duplicate
         required: false
+      - name: applicationClosed
+        label: 신청 마감
+        widget: boolean
+        default: false
+        i18n: duplicate
+        hint: 신청 마감 여부 — ON / OFF (기본 값 OFF)
+        required: false
       - name: note
         label: 특이사항
         widget: string

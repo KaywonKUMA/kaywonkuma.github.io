@@ -1,144 +1,144 @@
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
-        format("woff2");
-    font-weight: 100;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
-        format("woff2");
-    font-weight: 200;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
-        format("woff2");
-    font-weight: 300;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
-        format("woff2");
-    font-weight: 400;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
-        format("woff2");
-    font-weight: 500;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Medium.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
-        format("woff2");
-    font-weight: 600;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
-        format("woff2");
-    font-weight: 700;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
-        format("woff2");
-    font-weight: 800;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: "Pretendard";
-    src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
-        format("woff2");
-    font-weight: 900;
-    font-display: swap;
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-display: swap;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --header-offset: 120px;
+  --header-offset: 120px;
 
-    --font-base: 13pt;
-    --font-small: 9.5pt;
-    --font-subsection: 11pt;
+  --font-base: 13pt;
+  --font-small: 9.5pt;
+  --font-subsection: 11pt;
 
-    --line-base: 1.5;
-    --line-tight: 1.2;
+  --line-base: 1.5;
+  --line-tight: 1.2;
 
-    --content-padding: 10px;
-    --section-padding-y: 34px;
-    --section-gap: 18px;
+  --content-padding: 10px;
+  --section-padding-y: 34px;
+  --section-gap: 18px;
 
-    --cell-min-height: 34px;
-    --cell-padding: 0 8px 5px;
+  --cell-min-height: 34px;
+  --cell-padding: 0 8px 5px;
 
-    --line-color: black;
-    --point-color: brown;
+  --line-color: black;
+  --point-color: brown;
 
-    --exkuma-bg: #f1f3c9;
-    --exkuma-text: #441845;
+  --exkuma-bg: #f1f3c9;
+  --exkuma-text: #441845;
 }
 
 ::-moz-selection {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 
 ::selection {
-    background: black;
-    color: white;
+  background: black;
+  color: white;
 }
 
 ::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 body {
-    box-sizing: border-box;
-    font-family: "Pretendard", sans-serif;
-    font-size: var(--font-base);
-    line-height: var(--line-base);
-    font-weight: 500;
-    word-break: keep-all;
-    color: black;
-    background: white;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: "Pretendard", sans-serif;
+  font-size: var(--font-base);
+  line-height: var(--line-base);
+  font-weight: 500;
+  word-break: keep-all;
+  color: black;
+  background: white;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 p,
@@ -151,90 +151,90 @@ table,
 tr,
 thead,
 button {
-    font-size: var(--font-base);
-    line-height: var(--line-base);
-    word-break: keep-all;
-    overflow-wrap: break-word;
+  font-size: var(--font-base);
+  line-height: var(--line-base);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 th,
 td {
-    padding: 0;
-    margin: 0;
-    border: 0;
-    text-align: left;
-    font-weight: normal;
-    vertical-align: top;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  text-align: left;
+  font-weight: normal;
+  vertical-align: top;
 }
 
 caption {
-    margin: 0;
-    padding: 0;
-    text-align: left;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 thead,
 tbody,
 tfoot,
 tr {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 a {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }
 
 a:not(header a):hover {
-    color: var(--point-color);
-    font-family: inherit;
-    font-size: inherit;
-    text-decoration: none;
-    cursor: pointer;
+  color: var(--point-color);
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .title a:hover,
 .exhibition-title a:hover,
 .detail-link:hover,
 .download-link:hover {
-    color: var(--point-color);
-    font-family: inherit;
-    font-size: inherit;
-    text-decoration: none;
+  color: var(--point-color);
+  font-family: inherit;
+  font-size: inherit;
+  text-decoration: none;
 }
 
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 details:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 details summary::-webkit-details-marker {
-    display: none;
+  display: none;
 }
 
 details summary::marker {
-    content: "";
+  content: "";
 }
 
 img {
-    width: 100%;
-    display: block;
-    margin: 0;
+  width: 100%;
+  display: block;
+  margin: 0;
 }
 
 /* for markdown */
 [data-lang] p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 [data-lang] p:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 /* 000000000 */
@@ -248,234 +248,234 @@ img {
 #exkuma-unsettled,
 #exkuma-workshop,
 #exkuma-news {
-    scroll-margin-top: var(--header-offset);
+  scroll-margin-top: var(--header-offset);
 }
 
 .container.kuma[data-language="ko"] [data-lang="en"] {
-    display: none;
+  display: none;
 }
 
 .container.kuma[data-language="en"] [data-lang="ko"] {
-    display: none;
+  display: none;
 }
 
 .container.ex-kuma[data-language="ko"] [data-lang="en"] {
-    display: none;
+  display: none;
 }
 
 .container.ex-kuma[data-language="en"] [data-lang="ko"] {
-    display: none;
+  display: none;
 }
 
 .left,
 .right {
-    /*height: 100dvh;*/
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    overflow-anchor: none;
-    scrollbar-width: none;
-    scroll-behavior: smooth;
+  /*height: 100dvh;*/
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  overflow-anchor: none;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
 }
 
 .left::-webkit-scrollbar,
 .right::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 main {
-    position: relative;
-    box-sizing: border-box;
-    width: 100%;
-    height: 100dvh;
-    scrollbar-width: none;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  position: relative;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100dvh;
+  scrollbar-width: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .container.ex-kuma {
-    background-color: var(--exkuma-bg);
-    color: var(--exkuma-text);
-    height: auto;
+  background-color: var(--exkuma-bg);
+  color: var(--exkuma-text);
+  height: auto;
 }
 
 .container header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 15px;
-    width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+  width: 100%;
 }
 
 .container header nav {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-    line-height: 1.1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  line-height: 1.1;
 }
 
 .container header nav a {
-    line-height: 1.1;
+  line-height: 1.1;
 }
 
 .container.kuma header {
-    background-color: white;
+  background-color: white;
 }
 
 .container.ex-kuma header {
-    background-color: var(--exkuma-bg);
+  background-color: var(--exkuma-bg);
 }
 
 .container.ex-kuma header nav {
-    display: flex;
-    align-items: end;
+  display: flex;
+  align-items: end;
 }
 
 .sticker {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 9999;
-    cursor: pointer;
-    padding: 60px 80px;
-    transform: rotate(-4deg);
-    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
-    font-weight: bold;
-    letter-spacing: 1px;
-    text-align: center;
-    background-color: var(--exkuma-bg);
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  cursor: pointer;
+  padding: 60px 80px;
+  transform: rotate(-4deg);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  background-color: var(--exkuma-bg);
 }
 
 .sticker::after {
-    content: "";
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    width: 24px;
-    height: 24px;
-    border-radius: 50%;
-    background: rgba(0, 0, 0, 0.05);
-    box-shadow:
-        inset 2px 2px 4px rgba(0, 0, 0, 0.15),
-        inset -2px -2px 4px rgba(255, 255, 255, 0.5);
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  box-shadow:
+    inset 2px 2px 4px rgba(0, 0, 0, 0.15),
+    inset -2px -2px 4px rgba(255, 255, 255, 0.5);
 }
 
 .container.ex-kuma a,
 .container.ex-kuma p,
 .container.ex-kuma h1,
 .container.ex-kuma h2 {
-    color: inherit;
+  color: inherit;
 }
 
 nav a,
 nav a:visited,
 nav a:focus,
 nav a:active {
-    color: inherit;
-    text-decoration: none;
-    font-family: inherit;
-    font-size: var(--font-base);
-    line-height: 1.1;
-    outline: none;
+  color: inherit;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: var(--font-base);
+  line-height: 1.1;
+  outline: none;
 }
 
 .container header .title {
-    font-weight: 600;
-    font-size: 16pt;
-    line-height: 1;
+  font-weight: 600;
+  font-size: 16pt;
+  line-height: 1;
 }
 
 section {
-    padding: var(--content-padding);
-    padding-top: 0;
-    padding-bottom: 0;
+  padding: var(--content-padding);
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .lang-button {
-    cursor: pointer;
-    user-select: none;
+  cursor: pointer;
+  user-select: none;
 }
 
 .container section > [class$="-container"] {
-    border-bottom: 1px solid var(--line-color);
-    padding-top: var(--section-padding-y);
-    padding-bottom: var(--section-padding-y);
+  border-bottom: 1px solid var(--line-color);
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
 }
 
 .container.ex-kuma section > [class$="-container"] {
-    border-bottom: 1px solid var(--exkuma-text);
+  border-bottom: 1px solid var(--exkuma-text);
 }
 
 .container section > [class$="-container"]:last-child {
-    border-bottom: 0px;
+  border-bottom: 0px;
 }
 
 .container.ex-kuma section > .unsettled-container {
-    border-bottom: none;
-    padding-bottom: 0;
+  border-bottom: none;
+  padding-bottom: 0;
 }
 
 .container.ex-kuma a,
 .container.ex-kuma button {
-    color: var(--exkuma-text);
+  color: var(--exkuma-text);
 }
 
 .container.ex-kuma button {
-    background-color: var(--exkuma-bg);
-    color: var(--exkuma-text);
-    border: none;
+  background-color: var(--exkuma-bg);
+  color: var(--exkuma-text);
+  border: none;
 }
 
 .section-title {
-    margin-left: 0;
-    margin-bottom: var(--section-gap);
-    font-size: var(--font-base);
-    line-height: var(--line-tight);
-    color: var(--point-color);
+  margin-left: 0;
+  margin-bottom: var(--section-gap);
+  font-size: var(--font-base);
+  line-height: var(--line-tight);
+  color: var(--point-color);
 }
 
 .section-description {
-    margin-bottom: var(--section-gap);
+  margin-bottom: var(--section-gap);
 }
 
 .container.ex-kuma .section-title {
-    color: var(--exkuma-text);
+  color: var(--exkuma-text);
 }
 
 .subtitle {
-    margin-bottom: 6px;
-    padding-bottom: 0;
-    border-bottom: 0;
-    font-size: var(--font-subsection);
-    line-height: var(--line-tight);
-    color: black;
-    font-family: "helvetica", "pretendard", sans-serif;
+  margin-bottom: 6px;
+  padding-bottom: 0;
+  border-bottom: 0;
+  font-size: var(--font-subsection);
+  line-height: var(--line-tight);
+  color: black;
+  font-family: "helvetica", "pretendard", sans-serif;
 }
 
 .subtitle:before {
-    content: "↳ ";
-    font-family: "Pretendard";
-    color: var(--point-color);
+  content: "↳ ";
+  font-family: "Pretendard";
+  color: var(--point-color);
 }
 
 details summary {
-    display: flex;
-    gap: 8px;
-    text-overflow: ellipsis;
-    white-space: wrap;
-    user-select: none;
+  display: flex;
+  gap: 8px;
+  text-overflow: ellipsis;
+  white-space: wrap;
+  user-select: none;
 }
 
 details[open] > summary {
-    margin-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 .workshops-head,
@@ -488,104 +488,104 @@ details[open] > summary {
 .resources-item,
 .collections-item,
 .committee-item {
-    display: grid;
+  display: grid;
 }
 
 .workshops-head,
 .exhibitions-head,
 .news-head,
 .resources-head {
-    border-bottom: 1px solid var(--line-color);
-    color: black;
-    font-size: var(--font-small);
-    line-height: var(--line-tight);
+  border-bottom: 1px solid var(--line-color);
+  color: black;
+  font-size: var(--font-small);
+  line-height: var(--line-tight);
 }
 
 .workshops-head > div,
 .exhibitions-head > div,
 .news-head > div,
 .resources-head > div {
-    padding: 0 6px 8px;
-}
-
-main .workshops-head,
-main .workshops-item {
-    grid-template-columns: 120px minmax(0, 1fr);
+  padding: 0 6px 8px;
 }
 
 main .exhibitions-head,
 main .exhibitions-item {
-    grid-template-columns: 100px minmax(0, 1fr);
+  grid-template-columns: 100px minmax(0, 1fr);
 }
 
 .workshops-item .title,
 .workshops-head .title {
-    overflow-wrap: anywhere;
-    word-break: break-word;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .workshops-head,
 .workshops-item {
-    grid-template-columns: clamp(100px, 15vw, 200px) minmax(0, 1fr);
+  grid-template-columns: clamp(100px, 15vw, 200px) minmax(0, 1fr);
+}
+
+.workshops-item type {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .exhibitions-head,
 .exhibitions-item- {
-    grid-template-columns: clamp(90px, 15vw, 200px) minmax(0, 1fr);
+  grid-template-columns: clamp(90px, 15vw, 200px) minmax(0, 1fr);
 }
 
 .exhibitions-item summary {
-    display: grid;
-    grid-template-columns: 12px calc(100% - 110px) 88px;
+  display: grid;
+  grid-template-columns: 12px calc(100% - 110px) 88px;
 }
 
 .exhibition-item .title {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .workshops-item summary {
-    grid-template-columns: 100%;
+  grid-template-columns: 100%;
 }
 
 .collections-grid,
 .committee-grid {
-    border-top: 1px solid black;
+  border-top: 1px solid black;
 }
 
 .collections-item {
-    grid-template-columns: clamp(75px, 8vw, 95px) auto clamp(60px, 8vw, 90px);
+  grid-template-columns: clamp(75px, 8vw, 95px) auto clamp(60px, 8vw, 90px);
 }
 
 .committee-item {
-    grid-template-columns: clamp(75px, 8vw, 95px) minmax(0, 1fr) clamp(
-            140px,
-            15vw,
-            180px
-        );
+  grid-template-columns: clamp(75px, 8vw, 95px) minmax(0, 1fr) clamp(
+      140px,
+      15vw,
+      180px
+    );
 }
 
 .content {
-    cursor: default;
+  cursor: default;
 }
 
 .content > .image {
-    border: 1px solid var(--exkuma-text);
-    margin: 4px 0 18px;
-    display: flex;
+  border: 1px solid var(--exkuma-text);
+  margin: 4px 0 18px;
+  display: flex;
 }
 
 .content > .image img {
-    width: 100%;
-    flex: 0 0 100%;
-    object-fit: contain;
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: contain;
 }
 
 .news-head,
 .news-item,
 .resources-head,
 .resources-item {
-    grid-template-columns: 86px minmax(0, 1fr);
+  grid-template-columns: 86px minmax(0, 1fr);
 }
 
 .workshops-item > *,
@@ -595,18 +595,18 @@ main .exhibitions-item {
 .resources-item > *,
 .collections-item > *,
 .committee-item > * {
-    min-height: var(--cell-min-height);
-    padding-top: 10px;
-    padding: var(--cell-padding);
-    font-size: var(--font-base);
-    line-height: var(--line-base);
-    background: transparent;
-    border-left: 1px solid var(--line-color);
+  min-height: var(--cell-min-height);
+  padding-top: 10px;
+  padding: var(--cell-padding);
+  font-size: var(--font-base);
+  line-height: var(--line-base);
+  background: transparent;
+  border-left: 1px solid var(--line-color);
 }
 
 .workshops-item > .title,
 .exhibition-item > .title {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .workshops-item-container,
@@ -615,7 +615,7 @@ main .exhibitions-item {
 .resources-item-container,
 .collections-item-container,
 .committee-item-container {
-    border-bottom: 1px solid var(--line-color);
+  border-bottom: 1px solid var(--line-color);
 }
 
 .workshops-item,
@@ -624,272 +624,272 @@ main .exhibitions-item {
 .resources-item,
 .collections-item,
 .committee-item {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .collections-item .title {
-    position: relative;
-    overflow: visible;
-    cursor: default;
+  position: relative;
+  overflow: visible;
+  cursor: default;
 }
 
 .exhibition-item-container .top {
-    display: grid;
-    grid-template-columns:
-        clamp(75px, 8vw, 95px)
-        minmax(0, 1fr)
-        clamp(100px, 10vw, 150px);
+  display: grid;
+  grid-template-columns:
+    clamp(75px, 8vw, 95px)
+    minmax(0, 1fr)
+    clamp(100px, 10vw, 150px);
 }
 
 .exhibition-item-container .top .title {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 8px;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    min-width: 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .exhibition-item-container .top .title.clickable > *:not(.mark) {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .exhibition-item-container .top .title.clickable:hover {
-    color: var(--point-color);
+  color: var(--point-color);
 }
 
 .exhibition-item-container .top .title > span {
-    display: block;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    min-width: 0;
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
 }
 
 .exhibition-item-container .top .arrow {
-    margin-left: auto;
-    flex: 0 0 auto;
-    font-size: var(--font-base);
-    line-height: 1;
+  margin-left: auto;
+  flex: 0 0 auto;
+  font-size: var(--font-base);
+  line-height: 1;
 }
 
 .exhibition-item-container .bottom {
-    display: none;
+  display: none;
 }
 
 .exhibition-item-container .content > :first-child {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .exhibition-item-container.active .bottom {
-    display: grid;
-    grid-template-columns: clamp(75px, 8vw, 95px) auto;
+  display: grid;
+  grid-template-columns: clamp(75px, 8vw, 95px) auto;
 }
 
 .container.ex-kuma .news-head,
 .workshops-head {
-    border-bottom: 1px solid var(--exkuma-text);
+  border-bottom: 1px solid var(--exkuma-text);
 }
 
 .container.ex-kuma .news-item > *,
 .workshops-item > * {
-    border-left: 1px solid var(--exkuma-text);
+  border-left: 1px solid var(--exkuma-text);
 }
 
 .container.ex-kuma .news-item-container,
 .workshops-item-container {
-    border-bottom: 1px solid var(--exkuma-text);
+  border-bottom: 1px solid var(--exkuma-text);
 }
 
 .container.ex-kuma .type,
 .container.ex-kuma .title {
-    color: var(--exkuma-text);
+  color: var(--exkuma-text);
 }
 
 .collections-image {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 60%;
-    width: 150px !important;
-    height: auto;
-    background: white;
-    z-index: 1000;
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 60%;
+  width: 150px !important;
+  height: auto;
+  background: white;
+  z-index: 1000;
 }
 
 .collections-item.active .collections-image {
-    display: block;
+  display: block;
 }
 
 @media (hover: hover) {
-    .collections-item:hover .collections-image {
-        display: block;
-    }
+  .collections-item:hover .collections-image {
+    display: block;
+  }
 }
 
 .mark-container {
-    display: flex;
-    gap: 12px;
-    align-items: center;
-    margin-top: 0;
-    margin-bottom: var(--section-gap);
-    font-size: var(--font-small);
-    line-height: var(--line-tight);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: var(--section-gap);
+  font-size: var(--font-small);
+  line-height: var(--line-tight);
 }
 
 .mark {
-    display: inline-flex;
-    align-items: center;
-    gap: 4px;
-    flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex-shrink: 0;
 }
 
 .container .mark i {
-    display: inline-block;
-    width: 12px;
-    height: 12px;
-    border: 1px solid var(--line-color);
-    flex: 0 0 auto;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid var(--line-color);
+  flex: 0 0 auto;
 }
 
 .title .arrow {
-    flex-shrink: 0;
+  flex-shrink: 0;
 }
 
 .container.kuma .upcoming {
-    background: white;
+  background: white;
 }
 
 .container.kuma .current {
-    background: black;
+  background: black;
 }
 
 .container.kuma .past {
-    background: repeating-linear-gradient(
-        45deg,
-        black 0,
-        black 1px,
-        white 1px,
-        white 3px
-    );
+  background: repeating-linear-gradient(
+    45deg,
+    black 0,
+    black 1px,
+    white 1px,
+    white 3px
+  );
 }
 
 .container.ex-kuma .upcoming {
-    background: var(--exkuma-bg);
+  background: var(--exkuma-bg);
 }
 
 .container.ex-kuma .current {
-    background: var(--exkuma-text);
+  background: var(--exkuma-text);
 }
 
 .container.ex-kuma .past {
-    background: repeating-linear-gradient(
-        45deg,
-        var(--exkuma-text) 0px,
-        var(--exkuma-text) 1px,
-        white 1px,
-        white 3px
-    );
+  background: repeating-linear-gradient(
+    45deg,
+    var(--exkuma-text) 0px,
+    var(--exkuma-text) 1px,
+    white 1px,
+    white 3px
+  );
 }
 
 .exhibitions-grid .gallery {
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
 }
 
 .gallery-slider {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid black;
-    margin: 4px 0 18px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid black;
+  margin: 4px 0 18px;
 }
 
 .gallery-track {
-    display: flex;
-    transition: transform 0.3s ease;
+  display: flex;
+  transition: transform 0.3s ease;
 }
 
 .gallery-track img {
-    width: 100%;
-    flex: 0 0 100%;
-    object-fit: contain;
+  width: 100%;
+  flex: 0 0 100%;
+  object-fit: contain;
 }
 
 .image-container {
-    flex: 0 0 100%;
-    flex-wrap: nowrap;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-    height: 100%;
+  flex: 0 0 100%;
+  flex-wrap: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  height: 100%;
 }
 
 .image-container img {
-    width: 100%;
-    object-fit: contain;
-    display: block;
+  width: 100%;
+  object-fit: contain;
+  display: block;
 }
 
 .image-credit {
-    padding-left: --;
+  padding-left: --;
 }
 
 .prev-button,
 .next-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 10;
-    padding: 4px 8px;
-    font-size: var(--font-base);
-    line-height: 1;
-    background: white;
-    border: 1px solid var(--line-color);
-    padding: 5px 13px;
-    user-select: none;
-    color: black;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  padding: 4px 8px;
+  font-size: var(--font-base);
+  line-height: 1;
+  background: white;
+  border: 1px solid var(--line-color);
+  padding: 5px 13px;
+  user-select: none;
+  color: black;
 }
 
 .prev-button:hover,
 .next-button:hover {
-    color: var(--point-color);
+  color: var(--point-color);
 }
 
 .prev-button {
-    left: 8px;
+  left: 8px;
 }
 
 .next-button {
-    right: 8px;
+  right: 8px;
 }
 
 .prev-button.hidden,
 .next-button.hidden {
-    display: none;
+  display: none;
 }
 
 .header {
-    font-weight: 600;
-    border-bottom: 1px solid #000;
+  font-weight: 600;
+  border-bottom: 1px solid #000;
 }
 
 .logos-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    align-items: center;
-    border-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 0px;
 }
 
 .logos-container .logo {
-    height: clamp(30px, 5vw, 60px);
-    width: auto;
-    object-fit: contain;
+  height: clamp(30px, 5vw, 60px);
+  width: auto;
+  object-fit: contain;
 }
 
 /*.container.ex-kuma section > .about-container {
@@ -898,177 +898,177 @@ main .exhibitions-item {
 }*/
 
 .unsettled-container {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .poster-container {
-    width: clamp(50%, 60%, 60%);
+  width: clamp(50%, 60%, 60%);
 }
 
 .unsettled-container ul li {
-    display: flex;
-    gap: var(--section-gap);
+  display: flex;
+  gap: var(--section-gap);
 }
 
 .unsettled-container ul li span:first-child {
-    display: inline-block;
-    font-size: var(--font-small);
-    border-radius: 999px;
-    padding: 1px 10px;
-    border: 1px solid var(--line-color);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: inline-block;
+  font-size: var(--font-small);
+  border-radius: 999px;
+  padding: 1px 10px;
+  border: 1px solid var(--line-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .upcoming-container {
-    display: grid;
-    grid-template-areas:
-        "top"
-        "bottom";
-    gap: var(--section-gap);
+  display: grid;
+  grid-template-areas:
+    "top"
+    "bottom";
+  gap: var(--section-gap);
 }
 
 .upcoming-item {
-    border: 1px solid var(--exkuma-text);
+  border: 1px solid var(--exkuma-text);
 }
 
 .upcoming-item > .top > [data-lang] {
-    grid-area: top;
-    border-bottom: 1px solid var(--exkuma-text);
-    padding: var(--section-gap);
-    display: flex;
-    flex-direction: column;
-    gap: var(--section-gap);
+  grid-area: top;
+  border-bottom: 1px solid var(--exkuma-text);
+  padding: var(--section-gap);
+  display: flex;
+  flex-direction: column;
+  gap: var(--section-gap);
 }
 
 .upcoming-item > .bottom {
-    grid-area: bottom;
-    display: grid;
-    grid-template-columns: 100%;
+  grid-area: bottom;
+  display: grid;
+  grid-template-columns: 100%;
 }
 
 .upcoming-item > .bottom.apply {
-    grid-template-columns: auto clamp(120px, 15vw, 170px);
+  grid-template-columns: auto clamp(120px, 15vw, 170px);
 }
 
 .upcoming-item > .bottom > .left {
-    padding: var(--section-gap);
+  padding: var(--section-gap);
 }
 
 .upcoming-item > .bottom > .left {
-    border-right: 1px solid var(--exkuma-text);
+  border-right: 1px solid var(--exkuma-text);
 }
 
 .upcoming-item > .bottom > .right {
-    display: flex;
+  display: flex;
 }
 
 .upcoming-item .right a span {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .upcoming-item .categories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .upcoming-item .categories .category {
-    font-size: var(--font-subsection);
-    line-height: var(--line-tight);
-    border: 1px solid var(--exkuma-text);
-    padding: 2px;
+  font-size: var(--font-subsection);
+  line-height: var(--line-tight);
+  border: 1px solid var(--exkuma-text);
+  padding: 2px;
 }
 
 .upcoming-item .right a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .clock {
-    position: fixed;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 999;
-    pointer-events: none;
-    width: 76px;
-    height: 76px;
-    visibility: hidden;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+  width: 76px;
+  height: 76px;
+  visibility: hidden;
 }
 
 main .container.ex-kuma .clock {
-    transform: translateY(-50%);
-    visibility: hidden;
+  transform: translateY(-50%);
+  visibility: hidden;
 }
 
 main .container.kuma .clock.clock-left {
-    left: 25%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+  left: 25%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .container.kuma .clock.clock-left {
-    left: 50%;
+  left: 50%;
 }
 
 .container.exkuma .clock.clock-right {
-    left: 25%;
+  left: 25%;
 }
 
 .clock-face {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 1px solid var(--line-color);
-    background: transparent;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid var(--line-color);
+  background: transparent;
 }
 
 .hand {
-    position: absolute;
-    left: 50%;
-    bottom: 50%;
-    transform-origin: bottom center;
+  position: absolute;
+  left: 50%;
+  bottom: 50%;
+  transform-origin: bottom center;
 }
 
 .hour-hand {
-    width: 2px;
-    height: 20px;
-    background: black;
+  width: 2px;
+  height: 20px;
+  background: black;
 }
 
 .minute-hand {
-    width: 2px;
-    height: 28px;
-    background: black;
+  width: 2px;
+  height: 28px;
+  background: black;
 }
 
 .second-hand {
-    width: 1px;
-    height: 32px;
-    background: black;
+  width: 1px;
+  height: 32px;
+  background: black;
 }
 
 .clock-center {
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    background: black;
-    transform: translate(-50%, -50%);
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: black;
+  transform: translate(-50%, -50%);
 }
 
 .container.ex-kuma .clock-center,
@@ -1076,104 +1076,104 @@ main .container.kuma .clock.clock-left {
 .container.ex-kuma .hand,
 .container.ex-kuma .hour-hand,
 .container.ex-kuma .minute-hand {
-    background: var(--exkuma-text);
+  background: var(--exkuma-text);
 }
 
 .container.ex-kuma .clock-face {
-    border-color: var(--exkuma-text);
+  border-color: var(--exkuma-text);
 }
 
 .bottom-img-container {
-    width: 100%;
+  width: 100%;
 }
 
 @media screen and (max-width: 1280px) {
-    .sticker {
-        transform: rotate(-4deg) scale(0.5);
-        transform-origin: top right;
-        box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
-    }
+  .sticker {
+    transform: rotate(-4deg) scale(0.5);
+    transform-origin: top right;
+    box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+  }
 }
 
 @media (max-width: 1024px) {
-    :root {
-        --font-base: 12pt;
-        --font-small: 9pt;
-        --font-subsection: 10.5pt;
+  :root {
+    --font-base: 12pt;
+    --font-small: 9pt;
+    --font-subsection: 10.5pt;
 
-        --line-base: 1.4;
-        --line-tight: 1.15;
+    --line-base: 1.4;
+    --line-tight: 1.15;
 
-        --section-gap: 16px;
-    }
+    --section-gap: 16px;
+  }
 
-    main .poster-container {
-        width: 100%;
-    }
+  main .poster-container {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 768px) {
-    :root {
-        --font-base: 11pt;
-        --font-small: 8.5pt;
-        --font-subsection: 10pt;
+  :root {
+    --font-base: 11pt;
+    --font-small: 8.5pt;
+    --font-subsection: 10pt;
 
-        --line-base: 1.35;
-        --line-tight: 1.1;
+    --line-base: 1.35;
+    --line-tight: 1.1;
 
-        --section-gap: 14px;
-    }
+    --section-gap: 14px;
+  }
 }
 
 @media screen and (max-width: 580px) {
-    :root {
-        --font-base: 10pt;
-        --font-small: 8pt;
-        --font-subsection: 9pt;
+  :root {
+    --font-base: 10pt;
+    --font-small: 8pt;
+    --font-subsection: 9pt;
 
-        --line-base: 1.3;
-        --line-tight: 1.05;
+    --line-base: 1.3;
+    --line-tight: 1.05;
 
-        --section-gap: 12px;
-    }
+    --section-gap: 12px;
+  }
 
-    main .container.kuma header,
-    main .container.ex-kuma header {
-        padding: 0;
-    }
+  main .container.kuma header,
+  main .container.ex-kuma header {
+    padding: 0;
+  }
 
-    main .container.kuma header div,
-    main .container.ex-kuma header div {
-        width: 100%;
-        height: 100dvh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+  main .container.kuma header div,
+  main .container.ex-kuma header div {
+    width: 100%;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-    main .container.ex-kuma {
-        height: 100vh;
-    }
+  main .container.ex-kuma {
+    height: 100vh;
+  }
 
-    main .container header nav,
-    main .container.kuma section,
-    main .container.ex-kuma header nav,
-    main .container.ex-kuma section,
-    main .bottom-img,
-    main .sticker,
-    main .clock {
-        display: none;
-    }
+  main .container header nav,
+  main .container.kuma section,
+  main .container.ex-kuma header nav,
+  main .container.ex-kuma section,
+  main .bottom-img,
+  main .sticker,
+  main .clock {
+    display: none;
+  }
 
-    .clock.clock-left {
-        left: 50%;
-    }
+  .clock.clock-left {
+    left: 50%;
+  }
 
-    .container.exkuma .clock.clock-right {
-        left: 0%;
-    }
+  .container.exkuma .clock.clock-right {
+    left: 0%;
+  }
 
-    .poster-container {
-        width: 100%;
-    }
+  .poster-container {
+    width: 100%;
+  }
 }
