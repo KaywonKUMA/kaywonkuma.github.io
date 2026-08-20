@@ -513,8 +513,7 @@ main .exhibitions-item {
   grid-template-columns: 100px minmax(0, 1fr);
 }
 
-.workshops-item div
-.workshops-head div {
+.workshops-item div .workshops-head div {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
@@ -1189,4 +1188,3 @@ main .container.kuma .clock.clock-left {
     width: 100%;
   }
 }
-

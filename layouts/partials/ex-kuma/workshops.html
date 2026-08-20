@@ -1,75 +1,80 @@
 <div class="workshop-container" id="exkuma-workshop">
-    <div class="section-title">Workshop</div>
-    <div class="workshop-list">
-        <div class="workshops-head">
-            <div class="type">Type</div>
-            <div class="title">Workshop</div>
-        </div>
-
-        <div class="workshops-grid">
-            {{ range sort (where (where site.RegularPages "Section" "workshops")
-            "Params.ko.startDate" "<" (now.Format "2006-01-02" )) ".Params.ko.startDate" "desc" }} <div
-                class="workshops-item-container">
-                <div class="workshops-item">
-                    <div class="type">
-                        <span data-lang="ko">{{ .Params.ko.type }}</span>
-                        <span data-lang="en">{{ .Params.en.type }}</span>
-                    </div>
-
-                    <div class="title">
-                        <details class="workshop-item">
-                            <summary>
-                                <span data-lang="ko">{{ .Params.ko.title }}</span>
-                                <span data-lang="en">{{ .Params.en.title }}</span>
-                            </summary>
-
-                            <div class="content">
-                                <div class="image">
-                                    {{ with .Params.ko.image }}
-                                    <img src="{{ . | relURL }}" loading="lazy" alt="" />
-                                    {{ end }}
-                                </div>
-
-                                <div class="date">
-                                    <!--{{ time.Format "2006.01.02" (time
-                      .Params.ko.startDate)
-                    }}-->
-                                    <!--–
-                                        {{ time.Format "2006.01.02"
-                      (time .Params.ko.endDate)
-                    }}-->
-                                </div>
-                                <div data-lang="ko">
-                                    <div class="desription">
-                                        {{ .Params.ko.description | markdownify }}
-                                    </div>
-                                    <br />
-                                    {{ with .Params.ko.participants }}
-                                    <div class="participants">
-                                        <p>참여</p>
-                                        {{ . }}
-                                    </div>
-                                    {{ end }}
-                                </div>
-
-                                <div data-lang="en">
-                                    <div class="desription">
-                                        {{ .Params.en.description | markdownify }}
-                                    </div>
-                                    <br />
-                                    {{ with .Params.en.participants }}
-                                    <div class="participants">
-                                        <p>Participants</p>
-                                        {{ . }}
-                                    </div>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </details>
-                    </div>
-                </div>
-        </div>
-        {{ end }}
+  <div class="section-title">Workshop</div>
+  <div class="workshop-list">
+    <div class="workshops-head">
+      <div class="type">Type</div>
+      <div class="title">Workshop</div>
     </div>
-</div>
+
+    <div class="workshops-grid">
+      {{ $workshops := where site.RegularPages "Section" "workshops" }}
+      {{ $workshops = where $workshops "Params.ko.startDate" "<" (now.Format "2006-01-02") }}
+      {{ $workshops = where $workshops "Params.ko.endDate" "<" (now.Format "2006-01-02") }}
+
+      {{ range sort $workshops ".Params.ko.startDate" "desc" }}
+        {{ if ne .Params.ko.showUpcoming true }}
+          <div class="workshops-item-container">
+            <div class="workshops-item">
+              <div class="type">
+                <span data-lang="ko">{{ .Params.ko.type }}</span>
+                <span data-lang="en">{{ .Params.en.type }}</span>
+              </div>
+
+              <div class="title">
+                <details class="workshop-item">
+                  <summary>
+                    <span data-lang="ko">{{ .Params.ko.title }}</span>
+                    <span data-lang="en">{{ .Params.en.title }}</span>
+                  </summary>
+
+                  <div class="content">
+                    <div class="image">
+                      {{ with .Params.ko.image }}
+                        <img src="{{ . | relURL }}" loading="lazy" alt="" />
+                      {{ end }}
+                    </div>
+
+                    <div class="date">
+                      <!--{{ time.Format "2006.01.02" (time
+                        .Params.ko.startDate)
+                      }}-->
+                      <!--–
+                                        {{ time.Format "2006.01.02"
+                        (time .Params.ko.endDate)
+                      }}-->
+                    </div>
+                    <div data-lang="ko">
+                      <div class="desription">
+                        {{ .Params.ko.description | markdownify }}
+                      </div>
+                      <br />
+                      {{ with .Params.ko.participants }}
+                        <div class="participants">
+                          <p>참여</p>
+                          {{ . }}
+                        </div>
+                      {{ end }}
+                    </div>
+
+                    <div data-lang="en">
+                      <div class="desription">
+                        {{ .Params.en.description | markdownify }}
+                      </div>
+                      <br />
+                      {{ with .Params.en.participants }}
+                        <div class="participants">
+                          <p>Participants</p>
+                          {{ . }}
+                        </div>
+                      {{ end }}
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
 </div>
