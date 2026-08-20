@@ -13,8 +13,10 @@ ko:
   capacity: 15
   participants: 0
   applicationLink: https://docs.google.com/forms/d/e/1FAIpQLSc9zLCouj116uGqsxBQQF_ygA4Ez4CDJ9_cjIFPu6TALCCngw/viewform
+  applicationClosed: true
   note: AI 동시통역 시스템 및 전문 통역 지원
   images: []
+  showUpcoming: false
 en:
   category:
     - KAYWON
@@ -29,6 +31,8 @@ en:
   capacity: 15
   participants: 0
   applicationLink: https://docs.google.com/forms/d/e/1FAIpQLSc9zLCouj116uGqsxBQQF_ygA4Ez4CDJ9_cjIFPu6TALCCngw/viewform
+  applicationClosed: true
   note: AI-powered real-time interpretation and professional interpreters will be provided.
   images: []
+  showUpcoming: false
 ---
