@@ -558,11 +558,17 @@ main .exhibitions-item {
 }
 
 .committee-item {
-  grid-template-columns: clamp(75px, 8vw, 95px) minmax(0, 1fr) clamp(
+  grid-template-columns: clamp(90px, 12vw, 120px) minmax(0, 1fr) clamp(
       140px,
       15vw,
       180px
     );
+}
+
+.committee-item > div,
+.collections-item > div {
+  min-width: 0;
+  overflow-wrap: anywhere;
 }
 
 .content {
