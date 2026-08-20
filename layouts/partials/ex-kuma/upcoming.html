@@ -1,9 +1,12 @@
 <div class="upcoming-container">
     {{ $today := now }} {{ $workshops := where .Site.RegularPages "Section"
-    "workshops" }} {{ $upcoming := slice }} {{ range $workshops }} {{ $endDate :=
-    time .Params.ko.endDate }} {{ if ge $endDate $today }} {{ $upcoming =
-    $upcoming | append . }} {{ end }} {{ end }} {{ range sort $upcoming
-    ".Params.ko.startDate" "asc" }}
+    "workshops" }} {{ $upcoming := slice }}
+    {{ range $workshops }}
+    {{ $endDate := time .Params.ko.endDate }}
+    {{ if or (ge $endDate $today) .Params.ko.showUpcoming }} {{ $upcoming = $upcoming | append . }}
+    {{ end }}
+    {{ end }}
+    {{ range sort $upcoming ".Params.ko.startDate" "asc" }}
     <div class="upcoming-item">
         <div class="top">
             <div data-lang="ko">
@@ -69,8 +72,8 @@
             {{ if .Params.ko.applicationLink }}
             <div class="right">
                 {{ if .Params.ko.applicationClosed }}
-                <span class="apply closed" data-lang="ko"> 신청 마감 </span>
-                <span class="apply closed" data-lang="en"> Closed </span>
+                <a class="apply closed" data-lang="ko"> 신청 마감 </a>
+                <a class="apply closed" data-lang="en"> Closed </a>
                 {{ else }}
                 <a class="apply" data-lang="ko" target="_blank" href="{{ .Params.ko.applicationLink }}">
                     신청

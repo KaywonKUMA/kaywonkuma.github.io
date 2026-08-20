@@ -423,6 +423,12 @@ collections:
             label: 크레딧
             widget: string
             required: false
+      - name: showUpcoming
+        label: Upcoming에 강제로 표시
+        widget: boolean
+        default: false
+        i18n: duplicate
+        required: false
 
   - name: exkuma-news
     label: EX-KUMA News
