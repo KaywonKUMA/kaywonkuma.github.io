@@ -513,7 +513,7 @@ main .exhibitions-item {
   grid-template-columns: 100px minmax(0, 1fr);
 }
 
-.workshops-item div,
+.workshops-item div
 .workshops-head div {
   overflow-wrap: anywhere;
   word-break: break-word;
@@ -993,6 +993,13 @@ main .exhibitions-item {
   padding: 2px;
 }
 
+.upcoming-item .categories .category a {
+  color: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  text-decoration: none;
+}
+
 .upcoming-item .right a {
   display: flex;
   justify-content: center;
@@ -1182,3 +1189,4 @@ main .container.kuma .clock.clock-left {
     width: 100%;
   }
 }
+

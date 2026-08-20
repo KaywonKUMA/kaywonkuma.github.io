@@ -1,9 +1,12 @@
 ---
 ko:
   category:
-    - KAYWON
-    - BOISBUCHET
-    - NOTPLA
+  - name: KAYWON
+    url: ""
+  - name: BOISBUCHET
+    url: https://www.boisbuchet.org/
+  - name: NOTPLA
+    url: https://www.notpla.com/
   title: UNDERWATER FOREST
   description: 해조류 바이오 소재를 활용해 섬유형태의 바이오사와 반투명 필름 패널을 제작하고, 이를 엮어 몰입형 공간 설치 작품 「Underwater Forest」를 구현하는 워크숍
   startDate: 2026-08-19
@@ -19,10 +22,6 @@ ko:
   images: []
   showUpcoming: false
 en:
-  category:
-    - KAYWON
-    - BOISBUCHET
-    - NOTPLA
   title: Underwater Forest
   description: A workshop in which participants create bio-based yarns and translucent film panels using seaweed biomaterials, and weave them together to build an immersive spatial installation titled Underwater Forest.
   startDate: 2026-08-19

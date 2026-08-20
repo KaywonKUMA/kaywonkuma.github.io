@@ -337,11 +337,15 @@ collections:
         widget: list
         i18n: duplicate
         required: false
-        field:
-          label: 카테고리
-          name: category
-          i18n: duplicate
-          widget: string
+        fields:
+          - name: name
+            label: 카테고리
+            widget: string
+          - name: url
+            label: URL (옵션)
+            widget: string
+            required: false
+
       - name: title
         label: 제목
         widget: string

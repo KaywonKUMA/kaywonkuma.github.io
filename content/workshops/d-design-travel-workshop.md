@@ -1,8 +1,10 @@
 ---
 ko:
   category:
-    - KAYWON
-    - D&DEPARTMENT
+    - name: KAYWON
+      url: ''
+    - name: D&DEPARTMENT
+      url: https://www.d-department.com/
   title: D DESIGN TRAVEL WORKSHOP
   description: D DESIGN TRAVEL의 관점으로 지역(의왕, 안양, 평촌)의 고유한 자원과 문화를 조사하고 지역 콘텐츠를 기획·제작하는 워크숍
   startDate: 2026-08-25
@@ -18,9 +20,6 @@ ko:
   images: []
   showUpcoming: false
 en:
-  category:
-    - KAYWON
-    - D&DEPARTMENT
   title: D DESIGN TRAVEL WORKSHOP
   description: A workshop that investigates the unique resources and culture of the local regions (Uiwang, Anyang, and Pyeongchon) through the perspective of D DESIGN TRAVEL, and develops regional content and creative projects based on the research.
   startDate: 2026-08-25
