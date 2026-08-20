@@ -523,7 +523,7 @@ main .exhibitions-item {
   grid-template-columns: clamp(100px, 15vw, 200px) minmax(0, 1fr);
 }
 
-.workshops-item type {
+.workshops-head div .workshops-item div {
   word-break: break-word;
   overflow-wrap: anywhere;
 }
