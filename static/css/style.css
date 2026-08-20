@@ -955,6 +955,11 @@ main .exhibitions-item {
   grid-template-columns: auto clamp(120px, 15vw, 170px);
 }
 
+.upcoming-item .apply.closed {
+  pointer-events: none;
+  cursor: default;
+}
+
 .upcoming-item > .bottom > .left {
   padding: var(--section-gap);
 }
