@@ -8,7 +8,7 @@
 
     <div class="workshops-grid">
       {{ $workshops := where site.RegularPages "Section" "workshops" }}
-      {{ $workshops = where $workshops "Params.ko.startDate" "<" (now.Format "2006-01-02") }}
+      {{ $workshops = where $workshops "Params.ko.endDate" "<" (now.Format "2006-01-02") }}
 
       {{ range sort $workshops ".Params.ko.startDate" "desc" }}
         {{ if ne .Params.ko.showUpcoming true }}
