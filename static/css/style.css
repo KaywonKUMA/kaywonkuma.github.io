@@ -229,7 +229,8 @@ img {
 }
 
 /* for markdown */
-[data-lang] p {
+[data-lang] p,
+[data-lang] ul {
   margin-bottom: 1rem;
 }
 
