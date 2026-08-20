@@ -513,8 +513,8 @@ main .exhibitions-item {
   grid-template-columns: 100px minmax(0, 1fr);
 }
 
-.workshops-item .title,
-.workshops-head .title {
+.workshops-item div,
+.workshops-head div {
   overflow-wrap: anywhere;
   word-break: break-word;
 }
