@@ -183,6 +183,13 @@ collections:
             label: 크레딧
             widget: string
             required: false
+      - name: hidden
+        label: 숨김
+        widget: boolean
+        default: false
+        i18n: duplicate
+        hint: 숨김 여부 — ON / OFF (기본 값 OFF)
+        required: false
   - label: KUMA Resources
     name: resources
     i18n: true

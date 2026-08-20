@@ -1,131 +1,117 @@
- <div class="exhibition-container" id="kuma-exhibition">
-     <div class="section-title">Exhibition</div>
-     <div class="mark-container">
-         <span class="mark"><i class="current"></i>Current</span>
-         <span class="mark"><i class="upcoming"></i>Upcoming</span>
-         <span class="mark"><i class="past"></i>Past</span>
-     </div>
-     <div class="exhibition-list">
-         <div class="exhibitions-head">
-             <div class="type">Type</div>
-             <div class="title">Exhibitions</div>
-             <!--<div class="date">Date</div>-->
-         </div>
+<div class="exhibition-container" id="kuma-exhibition">
+    <div class="section-title">Exhibition</div>
+    <div class="mark-container">
+        <span class="mark"><i class="current"></i>Current</span>
+        <span class="mark"><i class="upcoming"></i>Upcoming</span>
+        <span class="mark"><i class="past"></i>Past</span>
+    </div>
+    <div class="exhibition-list">
+        <div class="exhibitions-head">
+            <div class="type">Type</div>
+            <div class="title">Exhibitions</div>
+            <!--<div class="date">Date</div>-->
+        </div>
 
-         <div class="exhibitions-grid">
-             {{ range sort (where site.RegularPages "Section"
-             "exhibitions") ".Params.ko.startDate" "desc" }}
-             <div class="exhibition-item-container">
-                 {{ if or .Params.ko.description .Params.en.description }}
-                 <div class="top toggle">
-                 {{ else }}
-                 <div class="top">
-                 {{ end }}
-                     <div class="type">
-                         <span data-lang="ko"
-                             >{{ .Params.ko.type }}</span
-                         >
-                         <span data-lang="en"
-                             >{{ .Params.en.type }}</span
-                         >
-                     </div>
-                     {{ if or .Params.ko.description .Params.en.description }}
-                    <div class="title clickable">
-                        {{ else }}
-                        <div class="title">
+        <div class="exhibitions-grid">
+            {{ range sort (where site.RegularPages "Section"
+            "exhibitions") ".Params.ko.startDate" "desc" }}
+            {{ if ne .Params.ko.hidden true }}
+            <div class="exhibition-item-container">
+                {{ if or .Params.ko.description .Params.en.description }}
+                <div class="top toggle">
+                    {{ else }}
+                    <div class="top">
                         {{ end }}
-                        {{ $now := now }} {{ $start := time
-                        .Params.ko.startDate }} {{ $end := time
-                        .Params.ko.endDate }} {{ if lt $now
-                        $start }}
-                        <span class="mark">
-                            <i class="upcoming"></i>
-                        </span>
-                        {{ else if and (ge $now $start) (le $now
-                        $end) }}
-                        <span class="mark">
-                            <i class="current"></i>
-                        </span>
-                        {{ else }}
-                        <span class="mark"
-                            ><i class="past"></i
-                        ></span>
-                        {{ end }}
-                        <span data-lang="ko">
-                            {{ .Params.ko.title }}
-                        </span>
-                        <span data-lang="en">
-                            {{ .Params.en.title }}
-                        </span>
-                        {{ if or .Params.ko.description .Params.en.description }}
-                        <span class="arrow">↓</span>
-                        {{ end }}
-                         </div>
-                         <div class="date">
-                             {{ time.Format "2006.01.02"
-                             .Params.ko.startDate }}
-                         </div>
-                 </div>
-                 <div class="bottom">
-                     <div class="blank"></div>
-                     <div class="content">
-                         {{ with .Params.ko.images }}
-                         <div class="gallery-slider">
-                             <button
-                                 class="prev-button"
-                                 type="button"
-                             >
-                                 ‹
-                             </button>
-
-                             <div class="gallery-track">
-                                 {{ range . }}
-                                 <div class="image-container">
-                                     <img
-                                         src="{{ .image | relURL }}"
-                                         loading="lazy"
-                                         alt=""
-                                     />
-                                     <div class="image-credit">
-                                         {{ with .credit }}
-                                         &nbsp;©{{ . }}
-                                         {{ end }}
-                                     </div>
-                                 </div>
-                                 {{ end }}
-                             </div>
-
-                             <button
-                                 class="next-button"
-                                 type="button"
-                             >›</button>
-                         </div>
-                         {{ end }}
-                        {{ if or .Params.ko.description .Params.en.description }}
-                        <div class="description">
-                            {{ if .Params.ko.description }}
-                            <div data-lang="ko">
-                                {{ .Params.ko.description | markdownify }}
-                            </div>
-                            {{ end }}
-
-                            {{ if .Params.en.description }}
-                            <div data-lang="en">
-                                {{ .Params.en.description | markdownify }}
-                            </div>
-                            {{ end }}
+                        <div class="type">
+                            <span data-lang="ko">{{ .Params.ko.type }}</span>
+                            <span data-lang="en">{{ .Params.en.type }}</span>
                         </div>
-                        {{ end }}
-                     </div>
-                 </div>
-             </div>
-             {{ end }}
-             <div class="exhibition-item-container">
-                 <div class="top">
-                     <div class="type">...</div>
-                     <div class="title">2024년 이전 전시</div>
-                 </div>
-             </div>
-         </div>
-     </div>
- </div>
+                        {{ if or .Params.ko.description .Params.en.description }}
+                        <div class="title clickable">
+                            {{ else }}
+                            <div class="title">
+                                {{ end }}
+                                {{ $now := now }} {{ $start := time
+                                .Params.ko.startDate }} {{ $end := time
+                                .Params.ko.endDate }} {{ if lt $now
+                                $start }}
+                                <span class="mark">
+                                    <i class="upcoming"></i>
+                                </span>
+                                {{ else if and (ge $now $start) (le $now
+                                $end) }}
+                                <span class="mark">
+                                    <i class="current"></i>
+                                </span>
+                                {{ else }}
+                                <span class="mark"><i class="past"></i></span>
+                                {{ end }}
+                                <span data-lang="ko">
+                                    {{ .Params.ko.title }}
+                                </span>
+                                <span data-lang="en">
+                                    {{ .Params.en.title }}
+                                </span>
+                                {{ if or .Params.ko.description .Params.en.description }}
+                                <span class="arrow">↓</span>
+                                {{ end }}
+                            </div>
+                            <div class="date">
+                                {{ time.Format "2006.01.02"
+                                .Params.ko.startDate }}
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <div class="blank"></div>
+                            <div class="content">
+                                {{ with .Params.ko.images }}
+                                <div class="gallery-slider">
+                                    <button class="prev-button" type="button">
+                                        ‹
+                                    </button>
+
+                                    <div class="gallery-track">
+                                        {{ range . }}
+                                        <div class="image-container">
+                                            <img src="{{ .image | relURL }}" loading="lazy" alt="" />
+                                            <div class="image-credit">
+                                                {{ with .credit }}
+                                                &nbsp;©{{ . }}
+                                                {{ end }}
+                                            </div>
+                                        </div>
+                                        {{ end }}
+                                    </div>
+
+                                    <button class="next-button" type="button">›</button>
+                                </div>
+                                {{ end }}
+                                {{ if or .Params.ko.description .Params.en.description }}
+                                <div class="description">
+                                    {{ if .Params.ko.description }}
+                                    <div data-lang="ko">
+                                        {{ .Params.ko.description | markdownify }}
+                                    </div>
+                                    {{ end }}
+
+                                    {{ if .Params.en.description }}
+                                    <div data-lang="en">
+                                        {{ .Params.en.description | markdownify }}
+                                    </div>
+                                    {{ end }}
+                                </div>
+                                {{ end }}
+                            </div>
+                        </div>
+                    </div>
+                    {{ end }}
+                    {{ end }}
+                    <div class="exhibition-item-container">
+                        <div class="top">
+                            <div class="type">...</div>
+                            <div class="title">2024년 이전 전시</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
