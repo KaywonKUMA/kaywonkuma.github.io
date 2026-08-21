@@ -57,8 +57,11 @@
                                 {{ end }}
                             </div>
                             <div class="date">
-                                {{ time.Format "2006.01.02"
-                                .Params.ko.startDate }}
+                                 {{ $start := time .Params.ko.startDate }}
+                                    {{ $end := time .Params.ko.endDate }}
+
+                                    {{ time.Format "2006.1.2" $start }}{{ if ne $start $end }} – {{ time.Format "1.2" $end }}
+                                {{ end }}
                             </div>
                         </div>
                         <div class="bottom">

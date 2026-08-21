@@ -641,10 +641,7 @@ main .exhibitions-item {
 
 .exhibition-item-container .top {
   display: grid;
-  grid-template-columns:
-    clamp(75px, 8vw, 95px)
-    minmax(0, 1fr)
-    clamp(100px, 10vw, 150px);
+  grid-template-columns: clamp(75px, 8vw, 95px) minmax(0, 1fr) clamp(150px, 15vw, 170px);
 }
 
 .exhibition-item-container .top .title {
