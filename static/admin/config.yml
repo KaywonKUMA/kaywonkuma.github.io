@@ -352,7 +352,11 @@ collections:
             label: URL (옵션)
             widget: string
             required: false
-
+      - name: type
+        label: 유형
+        widget: string
+        i18n: true
+        required: false
       - name: title
         label: 제목
         widget: string

@@ -890,7 +890,8 @@ main .exhibitions-item {
 }
 
 .logos-container .logo {
-  height: clamp(30px, 5vw, 60px);
+  /*height: clamp(30px, 5vw, 60px);*/
+  height: 5vw;
   width: auto;
   object-fit: contain;
 }
