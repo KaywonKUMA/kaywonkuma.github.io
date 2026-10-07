@@ -35,7 +35,8 @@
         </div>
         {{ partial "common/partners.html" (dict "page" "/kuma-partners") }}
     </section>
+    {{ $about := site.GetPage "/kuma-about" }}
     <div class="bottom-img-container">
-        <img class="bottom-img" src="/assets/kuma02.jpg" />
+        <img class="bottom-img" src="{{ $about.Params.ko.bottom_image }}" alt="" />
     </div>
 </div>

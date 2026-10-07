@@ -36,8 +36,8 @@ collections:
         file: content/kuma-about.md
         i18n: true
         fields:
-          - label: 사진
-            name: image
+          - label: 상단 이미지
+            name: top_image
             widget: image
             i18n: duplicate
             required: true
@@ -46,6 +46,13 @@ collections:
             widget: richtext
             i18n: true
             required: true
+          - label: 하단 이미지
+            name: bottom_image  
+            widget: image
+            i18n: duplicate
+            required: true
+            
+              
   - label: KUMA 운영위원회
     name: committee
     i18n: true
