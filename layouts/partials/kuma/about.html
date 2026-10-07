@@ -18,7 +18,18 @@
                     {{ $about.Params.en.description | markdownify }}
                 </span>
             </div>
+            
             <br />
+            
+            <div class="subtitle">
+                <span data-lang="ko">KUMA 운영위원회</span>
+                <span data-lang="en">KUMA Committee</span>
+            </div>
+
+            {{ partial "kuma/committee.html" . }}
+            
+            <br />
+
             <div class="subtitle">
                 <span data-lang="ko">대표 소장품</span>
                 <span data-lang="en">Collection Highlights</span>
@@ -26,11 +37,4 @@
 
             {{ partial "kuma/collections.html" . }}
 
-            <br />
-            <div class="subtitle">
-                <span data-lang="ko">KUMA 운영위원회</span>
-                <span data-lang="en">KUMA Committee</span>
-            </div>
-
-            {{ partial "kuma/committee.html" . }}
         </div>
