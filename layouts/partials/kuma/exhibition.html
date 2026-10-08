@@ -68,7 +68,7 @@
                                 {{ with .Params.ko.images }}
                                 <div class="gallery-slider">
                                     <button class="prev-button" type="button">
-                                        ‹
+                                        ←
                                     </button>
 
                                     <div class="gallery-track">
@@ -84,7 +84,9 @@
                                         {{ end }}
                                     </div>
 
-                                    <button class="next-button" type="button">›</button>
+                                    <button class="next-button" type="button">
+                                        →
+                                    </button>
                                 </div>
                                 {{ end }}
                                 {{ if or .Params.ko.description .Params.en.description }}

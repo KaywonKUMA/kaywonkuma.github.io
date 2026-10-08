@@ -25,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const exKumaLangButton = document.querySelector(".lang-button.ex-kuma");
   const rightContainer = document.querySelector(".container.ex-kuma");
   const unsettledYear = document.querySelector(".unsettled-year");
+  const exKumaTitle = rightContainer.querySelector(".title");
+  
   unsettledYear.textContent += " " + new Date().getFullYear();
 
   exKumaLangButton.addEventListener("click", () => {
@@ -77,4 +79,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   rightContainer.style.setProperty("--exkuma-bg", selected.bg);
   rightContainer.style.setProperty("--exkuma-text", selected.text);
+  
+  exKumaTitle.addEventListener("mouseover", () => {
+      console.log("in")
+  })
+  
+  exKumaTitle.addEventListener("mouseout", () => {
+       console.log("out")
+  })
 });
