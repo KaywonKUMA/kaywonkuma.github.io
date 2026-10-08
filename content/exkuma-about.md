@@ -1,6 +1,6 @@
 ---
 ko:
-  image: /assets/exkuma01.jpg
+  top_image: /assets/exkuma01.jpg
   description: |-
     EX-KUMA는 계원예술대학교 KUMA 미술관의 역할을 캠퍼스 전역으로 확장하는 글로벌 프로젝트입니다. 캠퍼스를 하나의 “살아있는 미술관(Living Museum)”으로 전환하여, 교육·전시·연구가 긴밀히 연결된 통합 창의 플랫폼을 구축하는 것을 목표로 합니다. EX-KUMA를 통해 계원예대는 다음을 지향합니다.
 
@@ -17,8 +17,9 @@ ko:
     - — 캠퍼스를 확장된 미술관으로 활용하는 공동 교육·연구 프로젝트
 
     이를 통해 국제 예술 교류와 창의 인재 양성을 위한 장기적이고 지속 가능한 생태계를 함께 만들어가고자 합니다.
+  bottom_image: /assets/exkuma02.jpg
 en:
-  image: /assets/exkuma01.jpg
+  top_image: /assets/exkuma01.jpg
   description: |-
     EX-KUMA is a global project that expands the role of KUMA, the university museum of Kaywon University of Art & Design, across the entire campus. It aims to transform the campus into a “Living Museum,” establishing an integrated creative platform in which education, exhibitions, and research are closely interconnected. Through EX-KUMA, Kaywon University of Art & Design aims to achieve the following.
 
@@ -35,4 +36,5 @@ en:
     - — Joint education and research projects utilize the campus as an extended museum
 
     Through these initiatives, we aim to build a long-term, sustainable ecosystem for international artistic exchange and the cultivation of creative talent together.
+  bottom_image: /assets/exkuma02.jpg
 ---

@@ -299,8 +299,8 @@ collections:
         file: content/exkuma-about.md
         i18n: true
         fields:
-          - label: 사진
-            name: image
+          - label: 상단 사진
+            name: top_image
             widget: image
             i18n: duplicate
             required: true
@@ -310,6 +310,11 @@ collections:
             i18n: true
             required: true
             hint: Unsettled 란?
+          - label: 하단 사진
+            name: bottom_image
+            widget: image
+            i18n: duplicate
+            required: true
 
   - name: exkuma-unsettled
     label: EX-KUMA Unsettled
