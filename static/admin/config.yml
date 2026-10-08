@@ -52,33 +52,6 @@ collections:
             i18n: duplicate
             required: true
             
-              
-  - label: KUMA 운영위원회
-    name: committee
-    i18n: true
-    files:
-      - label: 운영위원회
-        name: committee
-        file: content/committee.md
-        i18n: true
-        fields:
-          - label: 운영위원 목록
-            name: items
-            widget: list
-            i18n: true
-            fields:
-              - label: 직책
-                name: role
-                widget: string
-                i18n: true
-              - label: 이름
-                name: name
-                widget: string
-                i18n: true
-              - label: 소속
-                name: affiliation
-                widget: string
-                i18n: true
   - label: KUMA 대표 소장품
     name: collections
     i18n: true
@@ -130,6 +103,32 @@ collections:
                 #       hint: PDF 등
                 #       i18n: true
                 #       required: false
+  - label: KUMA 운영위원회
+    name: committee
+    i18n: true
+    files:
+      - label: 운영위원회
+        name: committee
+        file: content/committee.md
+        i18n: true
+        fields:
+          - label: 운영위원 목록
+            name: items
+            widget: list
+            i18n: true
+            fields:
+              - label: 직책
+                name: role
+                widget: string
+                i18n: true
+              - label: 이름
+                name: name
+                widget: string
+                i18n: true
+              - label: 소속
+                name: affiliation
+                widget: string
+                i18n: true
   - name: exhibitions
     #     - label: 링크
     #       name: link
