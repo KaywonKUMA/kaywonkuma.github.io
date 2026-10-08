@@ -587,7 +587,7 @@ main .exhibitions-item {
 .news-item,
 .resources-head,
 .resources-item {
-  grid-template-columns: 86px minmax(0, 1fr);
+  grid-template-columns: clamp(75px, 8vw, 95px) minmax(0, 1fr);
 }
 
 .workshops-item > *,
