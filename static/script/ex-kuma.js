@@ -81,10 +81,17 @@ document.addEventListener("DOMContentLoaded", () => {
   rightContainer.style.setProperty("--exkuma-text", selected.text);
   
   exKumaTitle.addEventListener("mouseover", () => {
-      console.log("in")
-  })
-  
+    const availableColors = colorThemes
+      .filter((theme) => theme.text !== selected.text)
+      .map((theme) => theme.text);
+
+    const randomColor =
+      availableColors[Math.floor(Math.random() * availableColors.length)];
+
+    exKumaTitle.style.color = randomColor;
+  });
+
   exKumaTitle.addEventListener("mouseout", () => {
-       console.log("out")
-  })
+    exKumaTitle.style.color = selected.text;
+  });
 });
