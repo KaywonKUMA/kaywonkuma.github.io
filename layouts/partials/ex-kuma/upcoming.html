@@ -1,16 +1,9 @@
+{{ $upcoming := where .Site.RegularPages "Section" "upcoming" }}
+
+{{ if gt (len $upcoming) 0 }}
 <div class="upcoming-container">
-  {{ $today := now }}
-  {{ $workshops := where .Site.RegularPages "Section"
-    "workshops"
-  }}
-  {{ $upcoming := slice }}
-  {{ range $workshops }}
-    {{ $endDate := time .Params.ko.endDate }}
-    {{ if or (ge $endDate $today) .Params.ko.showUpcoming }}
-      {{ $upcoming = $upcoming | append . }}
-    {{ end }}
-  {{ end }}
   {{ range sort $upcoming ".Params.ko.startDate" "asc" }}
+  {{ if ne .Params.ko.hidden true }}
     <div class="upcoming-item">
       <div class="top">
         <div data-lang="ko">
@@ -132,4 +125,6 @@
       </div>
     </div>
   {{ end }}
+  {{ end }}
 </div>
+{{ end }}

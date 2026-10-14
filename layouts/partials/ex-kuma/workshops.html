@@ -1,79 +1,75 @@
+{{ $workshops := where site.RegularPages "Section" "workshops" }}
+
+{{ if gt (len $workshops) 0 }}
 <div class="workshop-container" id="exkuma-workshop">
   <div class="section-title">Workshop</div>
   <div class="workshop-list">
     <div class="workshops-head">
       <!--<div class="type">Type</div>
-            <div class="title">Workshop</div>-->
+      <div class="title">Workshop</div>-->
     </div>
 
     <div class="workshops-grid">
-      {{ $workshops := where site.RegularPages "Section" "workshops" }}
-      {{ $workshops = where $workshops "Params.ko.startDate" "<" (now.Format "2006-01-02" ) }}
-      {{ $workshops = where $workshops "Params.ko.endDate" "<" (now.Format "2006-01-02" ) }}
       {{ range sort $workshops ".Params.ko.startDate" "desc" }}
-        {{ if ne .Params.ko.showUpcoming true }}
-          <div class="workshops-item-container">
-            <div class="workshops-item">
-              <div class="type">
-                <span data-lang="ko">{{ .Params.ko.type }}</span>
-                <span data-lang="en">{{ .Params.en.type }}</span>
-              </div>
+        {{ if ne .Params.ko.hidden true }}
+        <div class="workshops-item-container">
+          <div class="workshops-item">
+            <div class="type">
+              <span data-lang="ko">{{ .Params.ko.type }}</span>
+              <span data-lang="en">{{ .Params.en.type }}</span>
+            </div>
 
-              <div class="title">
-                <details class="workshop-item">
-                  <summary>
-                    <span data-lang="ko">{{ .Params.ko.title }}</span>
-                    <span data-lang="en">{{ .Params.en.title }}</span>
-                  </summary>
+            <div class="title">
+              <details class="workshop-item">
+                <summary>
+                  <span data-lang="ko">{{ .Params.ko.title }}</span>
+                  <span data-lang="en">{{ .Params.en.title }}</span>
+                </summary>
 
-                  <div class="content">
-                    {{ with .Params.ko.image }}
-                      <div class="image">
-                        <img src="{{ . | relURL }}" loading="lazy" alt="" />
+                <div class="content">
+                  {{ with .Params.ko.image }}
+                    <div class="image">
+                      <img src="{{ . | relURL }}" loading="lazy" alt="" />
+                    </div>
+                  {{ end }}
+
+                  <div class="date">
+                    <!-- 날짜 표시 영역 -->
+                  </div>
+
+                  <div data-lang="ko">
+                    <div class="desription">
+                      {{ .Params.ko.description | markdownify }}
+                    </div>
+                    <br />
+                    {{ with .Params.ko.participants }}
+                      <div class="participants">
+                        <p>참여</p>
+                        {{ . }}
                       </div>
                     {{ end }}
-
-                    <div class="date">
-                      <!--{{ time.Format "2006.01.02" (time
-                        .Params.ko.startDate)
-                      }}-->
-                      <!--–
-                                        {{ time.Format "2006.01.02"
-                        (time .Params.ko.endDate)
-                      }}-->
-                    </div>
-                    <div data-lang="ko">
-                      <div class="desription">
-                        {{ .Params.ko.description | markdownify }}
-                      </div>
-                      <br />
-                      {{ with .Params.ko.participants }}
-                        <div class="participants">
-                          <p>참여</p>
-                          {{ . }}
-                        </div>
-                      {{ end }}
-                    </div>
-
-                    <div data-lang="en">
-                      <div class="desription">
-                        {{ .Params.en.description | markdownify }}
-                      </div>
-                      <br />
-                      {{ with .Params.en.participants }}
-                        <div class="participants">
-                          <p>Participants</p>
-                          {{ . }}
-                        </div>
-                      {{ end }}
-                    </div>
                   </div>
-                </details>
-              </div>
+
+                  <div data-lang="en">
+                    <div class="desription">
+                      {{ .Params.en.description | markdownify }}
+                    </div>
+                    <br />
+                    {{ with .Params.en.participants }}
+                      <div class="participants">
+                        <p>Participants</p>
+                        {{ . }}
+                      </div>
+                    {{ end }}
+                  </div>
+                </div>
+              </details>
             </div>
           </div>
-        {{ end }}
+        </div>
+        {{end }}
       {{ end }}
     </div>
   </div>
 </div>
+{{ end }}

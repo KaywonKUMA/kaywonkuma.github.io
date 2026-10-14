@@ -147,13 +147,6 @@ collections:
                 widget: string
                 i18n: true
   - name: exhibitions
-    #     - label: 링크
-    #       name: link
-    #       widget: string
-    #       hint: Google Drive 공유 링크 등
-    #       i18n: duplicate
-    #       required: false
-
     label: KUMA Exhibitions
     folder: /content/exhibitions
     create: true
@@ -370,19 +363,18 @@ collections:
             i18n: duplicate
             required: false
 
-  - name: exkuma-workshops
-    label: EX-KUMA Workshops
-    folder: /content/workshops
+              
+  - name: exkuma-upcoming
+    label: EX-KUMA Upcoming
+    folder: /content/upcoming
     create: true
-    media_folder: "{{media_folder}}/workshops/{{slug}}"
-    public_folder: "{{public_folder}}/workshops/{{slug}}"
+    media_folder: "{{media_folder}}/upcoming/{{slug}}"
+    public_folder: "{{public_folder}}/upcoming/{{slug}}"
     i18n: true
-
     sortable_fields:
       - title
       - startDate
       - endDate
-
     fields:
       - name: category
         label: 카테고리
@@ -397,11 +389,6 @@ collections:
             label: URL (옵션)
             widget: string
             required: false
-      - name: type
-        label: 유형
-        widget: string
-        i18n: true
-        required: false
       - name: title
         label: 제목
         widget: string
@@ -446,13 +433,6 @@ collections:
         min: 0
         i18n: duplicate
         required: false
-      - name: participants
-        label: 참여 인원
-        widget: number
-        value_type: int
-        min: 0
-        i18n: duplicate
-        required: false
       - name: applicationLink
         label: 신청 링크
         widget: string
@@ -464,6 +444,80 @@ collections:
         default: false
         i18n: duplicate
         hint: 신청 마감 여부 — ON / OFF (기본 값 OFF)
+        required: false
+      - name: note
+        label: 특이사항
+        widget: string
+        i18n: true
+        required: false
+      - name: hidden
+        label: 숨김
+        widget: boolean
+        default: false
+        i18n: duplicate
+        hint: 숨김 여부 — ON / OFF (기본 값 OFF)
+ 
+
+  - name: exkuma-workshops
+    label: EX-KUMA Workshops
+    folder: /content/workshops
+    create: true
+    media_folder: "{{media_folder}}/workshops/{{slug}}"
+    public_folder: "{{public_folder}}/workshops/{{slug}}"
+    i18n: true
+    sortable_fields:
+      - title
+      - startDate
+      - endDate
+    fields:
+      - name: type
+        label: 유형
+        widget: string
+        i18n: true
+        required: false
+      - name: title
+        label: 제목
+        widget: string
+        i18n: true
+        required: true
+      - name: description
+        label: 설명
+        widget: markdown
+        i18n: true
+        required: true
+      - name: startDate
+        label: 시작 날짜
+        widget: datetime
+        type: date
+        i18n: duplicate
+        required: true
+      - name: endDate
+        label: 종료 날짜
+        widget: datetime
+        type: date
+        i18n: duplicate
+        required: true
+      - name: startTime
+        label: 시작 시간
+        widget: datetime
+        type: time
+        required: false
+      - name: endTime
+        label: 종료 시간
+        widget: datetime
+        type: time
+        required: false
+      - name: master
+        label: 마스터
+        widget: string
+        i18n: true
+        required: false
+      - name: participants
+        label: 참여 인원
+        widget: number
+        value_type: int
+        min: 0
+        i18n: duplicate
         required: false
       - name: note
         label: 특이사항
@@ -483,12 +537,12 @@ collections:
             label: 크레딧
             widget: string
             required: false
-      - name: showUpcoming
-        label: Upcoming에 강제로 표시
+      - name: hidden
+        label: 숨김
         widget: boolean
         default: false
         i18n: duplicate
-        required: false
+        hint: 숨김 여부 — ON / OFF (기본 값 OFF)
 
   - name: exkuma-news
     label: EX-KUMA News
