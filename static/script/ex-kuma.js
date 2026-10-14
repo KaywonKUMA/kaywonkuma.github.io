@@ -80,15 +80,19 @@ document.addEventListener("DOMContentLoaded", () => {
   rightContainer.style.setProperty("--exkuma-bg", selected.bg);
   rightContainer.style.setProperty("--exkuma-text", selected.text);
   
+  let hoverColor;
+
   exKumaTitle.addEventListener("mouseover", () => {
-    const availableColors = colorThemes
-      .filter((theme) => theme.text !== selected.text)
-      .map((theme) => theme.text);
+    if (!hoverColor) {
+      const availableColors = colorThemes
+        .filter((theme) => theme.text !== selected.text)
+        .map((theme) => theme.text);
 
-    const randomColor =
-      availableColors[Math.floor(Math.random() * availableColors.length)];
+      hoverColor =
+        availableColors[Math.floor(Math.random() * availableColors.length)];
+    }
 
-    exKumaTitle.style.color = randomColor;
+    exKumaTitle.style.color = hoverColor;
   });
 
   exKumaTitle.addEventListener("mouseout", () => {
