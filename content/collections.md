@@ -36,8 +36,8 @@ ko:
       size: 3350 × 400 × 2500 mm
       year: 1994
 
-  etc_items:
-  - title: 전체 소장품 목록 다운로드
+  whole_list:
+    text: 전체 소장품 목록 다운로드 
     link: https://suzinkw.com/kuma-beta/pdf/collections.pdf
     
 en:
@@ -77,7 +77,7 @@ en:
       size: 3350 × 400 × 2500 mm
       year: 1994
 
-  etc_items:
-    - title: Download Full Collection List
-      link: https://suzinkw.com/kuma-beta/pdf/collections.pdf
+  whole_list:
+    text: Download Full Collection List
+    link: https://suzinkw.com/kuma-beta/pdf/collections.pdf
 ---

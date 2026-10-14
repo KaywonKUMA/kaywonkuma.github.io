@@ -61,6 +61,23 @@ collections:
         file: content/collections.md
         i18n: true
         fields:
+          - label: 전체 소장품
+            name: whole_list
+            hint: URL 
+            widget: object
+            i18n: true
+            required: true
+            fields: 
+              - label: 텍스트
+                name: text
+                widget: string
+                required: true
+                i18n: true
+              - label: 링크
+                name: link
+                widget: string
+                required: true
+                i18n: true              
           - label: 작품 목록
             name: items
             widget: list
@@ -271,6 +288,23 @@ collections:
                 name: logo
                 widget: image
                 hint: 협력사 로고 이미지
+                
+#               - name: 로고
+#                 label: logo
+#                 hint: 협력사 로고 이미지
+#                 widget: list
+#                 i18n: duplicate
+#                 required: false
+#                 fields:
+#                   - name: image
+#                     label: 이미지
+#                     widget: image
+#                     required: true
+#                   - name: width
+#                     label: 너비
+#                     hint: 단위 (vw)
+#                     widget: number
+#                     required: false
 
   - divider: true
 

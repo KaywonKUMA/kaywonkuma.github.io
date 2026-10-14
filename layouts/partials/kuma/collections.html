@@ -20,14 +20,15 @@
                     <div class="date">{{ .year }}</div>
                 </div>
             </div>
-            {{ end }} {{ range $collections.Params.ko.etc_items }}
-            <div class="collections-item-container">
-                <div class="collections-item collections-item--link">
-                    <div class="type">...</div>
+            {{ end }} 
 
+            {{ with $collections.Params.ko.whole_list }}
+            <div class="collections-item-container">
+                <div class="collections-item collections-item-link">
+                    <div class="type">...</div>
                     <div class="title">
                         <a href="{{ .link }}" target="_blank" rel="noopener">
-                            {{ .title }}
+                            {{ .text }}
                         </a>
                     </div>
                 </div>
@@ -53,19 +54,21 @@
                     <div class="date">{{ .year }}</div>
                 </div>
             </div>
-            {{ end }} {{ range $collections.Params.en.etc_items }}
+            {{ end }}
+    
+            {{ with $collections.Params.en.whole_list }}
             <div class="collections-item-container">
-                <div class="collections-item collections-item--link">
+                <div class="collections-item collections-item-link">
                     <div class="type">...</div>
-
                     <div class="title">
                         <a href="{{ .link }}" target="_blank" rel="noopener">
-                            {{ .title }}
+                            {{ .text }}
                         </a>
                     </div>
                 </div>
             </div>
             {{ end }}
+
         </div>
     </div>
 </div>
