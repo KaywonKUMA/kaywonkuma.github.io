@@ -848,7 +848,7 @@ main .exhibitions-item {
   line-height: 1;
   background: white;
   border: 1px solid var(--line-color);
-  padding: 5px 13px;
+  padding: 5px 10px;
   user-select: none;
   color: black;
 }
