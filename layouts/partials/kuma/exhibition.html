@@ -110,14 +110,32 @@
                     </div>
                     {{ end }}
                     {{ end }}
-                    <div class="exhibition-item-container">
-                        <div class="top">
-                            <div class="type">...</div>
-                            <div class="title" data-lang ="ko">2024년 이전 전시</div>
-                            <div class="title" data-lang ="en">Past Exhibitions</div>
-                        </div>
-                    </div>
                 </div>
             </div>
+            {{ with site.GetPage "/kuma-exhibitions-etc" }}
+                {{ $koLists := .Params.ko.lists }}
+                {{ $enLists := .Params.en.lists }}
+
+                {{ range $i, $ko := $koLists }}
+                    {{ $en := dict }}
+                    {{ if lt $i (len $enLists) }}
+                        {{ $en = index $enLists $i }}
+                    {{ end }}
+
+                    <div class="exhibition-item-container">
+                        <div class="top">
+                            <div class="type">
+                                <span data-lang="ko">{{ $ko.type }}</span>
+                                <span data-lang="en">{{ $en.type }}</span>
+                            </div>
+
+                            <div class="title">
+                                <a data-lang="ko" href="{{ $ko.link }}">{{ $ko.title }}</a>
+                                <a data-lang="en" href="{{ $en.link }}">{{ $en.title }}</a>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            {{ end }}
         </div>
 {{ end }}

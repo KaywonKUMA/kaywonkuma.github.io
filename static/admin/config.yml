@@ -157,7 +157,6 @@ collections:
       - title
       - startDate
       - endDate
-
     fields:
       - name: title
         label: 제목
@@ -206,6 +205,39 @@ collections:
         i18n: duplicate
         hint: 숨김 여부 — ON / OFF (기본 값 OFF)
         required: false
+        
+- name: exhibitions_etc
+  label: KUMA Exhibitions 기타
+  files:
+    - name: etc
+      label: 기타 목록
+      file: /content/kuma-exhibitions-etc.md
+      i18n: true
+      fields:
+        - name: lists
+          label: 리스트
+          widget: list
+          i18n: true
+          fields:
+            - name: type
+              label: 유형
+              widget: string
+              i18n: true
+              required: false
+              default: "..."
+
+            - name: title
+              label: 타이틀
+              widget: string
+              i18n: true
+              required: false
+
+            - name: link
+              label: 링크
+              widget: string
+              i18n: duplicate
+              required: false
+              
   - label: KUMA Resources
     name: resources
     i18n: true
