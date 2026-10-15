@@ -562,7 +562,7 @@ main .exhibitions-item {
 }
 
 .committee-item > div,
-.collections-item > div {
+.collections-item > div, .exhibition-item-container > div {
   min-width: 0;
   overflow-wrap: anywhere;
 }
