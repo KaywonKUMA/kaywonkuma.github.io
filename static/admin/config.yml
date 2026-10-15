@@ -26,6 +26,7 @@ media_libraries:
           height: 1600
         svg:
           optimize: true
+          
 collections:
   - name: kuma-about
     label: KUMA About
@@ -120,6 +121,7 @@ collections:
                 #       hint: PDF 등
                 #       i18n: true
                 #       required: false
+                
   - label: KUMA 운영위원회
     name: committee
     i18n: true
@@ -272,6 +274,7 @@ collections:
                 hint: Google Drive 공유 링크 등
                 i18n: duplicate
                 required: false
+                
   - name: kuma-news
     label: KUMA News
     folder: /content/kuma-news
@@ -294,6 +297,7 @@ collections:
         widget: string
         hint: https:// 로 시작하는 URL
         i18n: duplicate
+        
   - name: kuma-partners
     label: KUMA 협력사
     files:
@@ -599,6 +603,7 @@ collections:
         widget: string
         hint: https:// 로 시작하는 URL
         i18n: duplicate
+        
   - name: exkuma-partners
     label: EX-KUMA 협력사
     files:
@@ -619,7 +624,15 @@ collections:
                 name: logo
                 widget: image
                 hint: 협력사 로고 이미지
+              - label: 크기
+                name: size
+                hint: 로고 크기 (0% ~ 100%)
+                widget: number
+                max: 100
+                default: 100
+                
   - divider: true
+  
   - name: metatag
     label: 메타태그
     files:
