@@ -318,23 +318,6 @@ collections:
                 name: logo
                 widget: image
                 hint: 협력사 로고 이미지
-                
-#               - name: 로고
-#                 label: logo
-#                 hint: 협력사 로고 이미지
-#                 widget: list
-#                 i18n: duplicate
-#                 required: false
-#                 fields:
-#                   - name: image
-#                     label: 이미지
-#                     widget: image
-#                     required: true
-#                   - name: width
-#                     label: 너비
-#                     hint: 단위 (vw)
-#                     widget: number
-#                     required: false
 
   - divider: true
 
@@ -626,9 +609,8 @@ collections:
                 hint: 협력사 로고 이미지
               - label: 크기
                 name: size
-                hint: 로고 크기 (0% ~ 100%)
                 widget: number
-                max: 100
+                hint: 기본값 100px, 범위 50 ~ 150px
                 default: 100
                 
   - divider: true

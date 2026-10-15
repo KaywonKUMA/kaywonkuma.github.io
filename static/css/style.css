@@ -879,16 +879,19 @@ main .exhibitions-item {
 .logos-container {
   display: flex;
   flex-wrap: wrap;
-  gap: clamp(10px, 2vw, 20px);
+  gap: clamp(5px, 2vw, 20px);
   justify-content: center;
   align-items: center;
-  border-bottom: 0px;
-  height: clamp(130px, 15vw, 250px);
+  border-bottom: 0;
 }
 
 .logos-container .logo {
   width: auto;
-  height: 100%;
+  height: clamp(
+    50px,
+    min(var(--logo-size, 100px), 12vw),
+    200px
+  );
   object-fit: contain;
 }
 
