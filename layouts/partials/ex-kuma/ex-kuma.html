@@ -17,6 +17,7 @@
 
   {{ partial "ex-kuma/sticker.html" . }}
 
+
   <section>
     {{ partial "ex-kuma/about.html" . }}
     {{ partial "ex-kuma/unsettled.html" . }}
@@ -27,9 +28,9 @@
       "/exkuma-partners")
     }}
   </section>
-  
+
   {{ $about := site.GetPage "/exkuma-about" }}
   <div class="bottom-img-container">
-      <img class="bottom-img" src="{{ $about.Params.ko.bottom_image }}" alt="" />
+    <img class="bottom-img" src="{{ $about.Params.ko.bottom_image }}" alt="" />
   </div>
 </div>
