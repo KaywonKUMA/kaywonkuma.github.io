@@ -82,6 +82,7 @@ collections:
           - label: 작품 목록
             name: items
             widget: list
+            collapsed: true
             i18n: true
             summary: "{{fields.artist}} · {{fields.title}}"
             fields:
@@ -109,21 +110,9 @@ collections:
                 name: year
                 widget: number
                 i18n: duplicate
-                # - label: 기타 링크
-                #   name: etc_items
-                #   widget: list
-                #   i18n: true
-                #   summary: "{{fields.title}} · {{fields.link}}"
-                #   fields:
-                #     - label: 제목
-                #       name: title
-                #       widget: string
-                #       hint: PDF 등
-                #       i18n: true
-                #       required: false
                 
-  - label: KUMA 운영위원회
-    name: committee
+  - name: committee
+    label: KUMA 운영위원회
     i18n: true
     files:
       - label: 운영위원회
@@ -134,7 +123,9 @@ collections:
           - label: 운영위원 목록
             name: items
             widget: list
+            collapsed: true
             i18n: true
+            summary: "{{fields.role}} · {{fields.name}} · {{fields.affiliation}}"
             fields:
               - label: 직책
                 name: role
@@ -148,6 +139,7 @@ collections:
                 name: affiliation
                 widget: string
                 i18n: true
+                
   - name: exhibitions
     label: KUMA Exhibitions
     folder: /content/exhibitions
@@ -156,9 +148,10 @@ collections:
     public_folder: "{{public_folder}}/exhibitions/{{slug}}"
     i18n: true
     sortable_fields:
-      - title
-      - startDate
-      - endDate
+       fields: [title, startDate, endDate]
+       default:
+         field: startDate
+         direction: ascending  
     fields:
       - name: title
         label: 제목
@@ -253,6 +246,7 @@ collections:
           - label: 자료 목록
             name: items
             widget: list
+            collapsed: true
             i18n: true
             summary: "{{fields.type}} · {{fields.title}}"
             fields:
@@ -308,6 +302,7 @@ collections:
           - label: 협력사 목록
             name: items
             widget: list
+            collapsed: true
             summary: "{{fields.name}}"
             fields:
               - label: 이름
@@ -597,6 +592,7 @@ collections:
           - label: 협력사 목록
             name: items
             widget: list
+            collapsed: true
             summary: "{{fields.name}}"
             fields:
               - label: 이름
