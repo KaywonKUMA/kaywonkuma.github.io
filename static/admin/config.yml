@@ -387,23 +387,27 @@ collections:
     public_folder: "{{public_folder}}/upcoming/{{slug}}"
     i18n: true
     sortable_fields:
-      - title
-      - startDate
-      - endDate
+       fields: [title, startDate, endDate]
+       default:
+         field: startDate
+         direction: ascending  
     fields:
       - name: category
         label: 카테고리
         widget: list
-        i18n: duplicate
+        i18n: true
         required: false
         fields:
           - name: name
             label: 카테고리
             widget: string
+            i18n: true
           - name: url
             label: URL (옵션)
             widget: string
+            i18n: duplicate
             required: false
+            
       - name: title
         label: 제목
         widget: string
@@ -481,9 +485,10 @@ collections:
     public_folder: "{{public_folder}}/workshops/{{slug}}"
     i18n: true
     sortable_fields:
-      - title
-      - startDate
-      - endDate
+       fields: [title, startDate, endDate]
+       default:
+         field: startDate
+         direction: ascending  
     fields:
       - name: type
         label: 유형

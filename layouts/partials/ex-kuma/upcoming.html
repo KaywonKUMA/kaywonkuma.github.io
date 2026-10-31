@@ -27,12 +27,15 @@
         </div>
         <div data-lang="en">
           <div class="categories">
-            {{ range .Params.ko.category }}
+            {{ $categories := .Params.en.category }}
+            {{ if not $categories }}
+              {{ $categories = .Params.ko.category }}
+            {{ end }}
+            
+            {{ range $categories }}
               <span class="category">
                 {{ if .url }}
-                  <a href="{{ .url }}" target="_blank" rel="noopener"
-                    >{{ .name }}</a
-                  >
+                  <a href="{{ .url }}" target="_blank" rel="noopener">{{ .name }}</a>
                 {{ else }}
                   {{ .name }}
                 {{ end }}
