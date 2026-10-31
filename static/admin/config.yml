@@ -47,6 +47,10 @@ collections:
             widget: richtext
             i18n: true
             required: true
+            editor_components:
+              - smaller
+              - code-block
+              
           - label: 하단 이미지
             name: bottom_image  
             widget: image
@@ -272,7 +276,6 @@ collections:
   - name: kuma-news
     label: KUMA News
     folder: /content/kuma-news
-    required: false
     media_folder: "{{media_folder}}/kuma-news/{{slug}}"
     public_folder: "{{public_folder}}/kuma-news/{{slug}}"
     i18n: true
@@ -328,6 +331,9 @@ collections:
           - label: 내용
             name: description
             widget: richtext
+            editor_components:
+              - smaller
+              - code-block
             i18n: true
             required: false
             hint: "내용을 비워두면 스티커가 표시되지 않습니다."
@@ -348,7 +354,10 @@ collections:
             required: true
           - label: 소개
             name: description
-            widget: text
+            widget: richtext
+            editor_components:
+              - smaller
+              - code-block
             i18n: true
             required: true
             hint: Unsettled 란?
@@ -567,7 +576,6 @@ collections:
   - name: exkuma-news
     label: EX-KUMA News
     folder: /content/exkuma-news
-    required: false
     media_folder: "{{media_folder}}/exkuma-news/{{slug}}"
     public_folder: "{{public_folder}}/exkuma-news/{{slug}}"
     i18n: true

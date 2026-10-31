@@ -8,6 +8,28 @@
 
   <body>
     <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+    <script>
+        CMS.registerEditorComponent({
+          id: 'smaller',
+          label: 'Smaller',
+          icon: 'text_fields',
+          type: 'inline',
+        
+          pattern: /<small>(?<text>.+?)<\/small>/,
+        
+          toInline: ({ text = '' }) => `<small>${text}</small>`,
+        
+          toPreview: ({ text = '' }) => `<small>${text}</small>`,
+        
+          onInsert: async ({ selectedText }) => {
+            if (!selectedText) return null;
+        
+            return { text: selectedText };
+          },
+        
+          onEdit: async ({ data }) => data,
+        });
+    </script>
     <style>
       :root {
         --sui-font-family-default: "Arial", sans-serif;
