@@ -36,6 +36,20 @@
     defer
     src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js"
   ></script>
+  
+  <script>
+  var Hyphenopoly = {
+    require: {
+         "en-us": "supercalifragilisticexpialidocious",
+    },
+    setup: {
+      selectors: {
+         '[data-lang="en"]': {}
+      }
+    }
+  };
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hyphenopoly/6.0.0/Hyphenopoly_Loader.min.js"></script>
   <script defer src="/script/global.js"></script>
   {{ if .IsHome }}
     <script defer src="/script/kuma.js"></script>

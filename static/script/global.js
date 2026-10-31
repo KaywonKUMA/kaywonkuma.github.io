@@ -119,7 +119,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     }
   }
-
+  
+    document.querySelectorAll('[data-lang]').forEach((el) => {
+      const lang = el.dataset.lang;
+    
+      if (lang) {
+        el.setAttribute('lang', lang);
+      }
+    });
 
   randomizeClockPosition();
   updateClocks();

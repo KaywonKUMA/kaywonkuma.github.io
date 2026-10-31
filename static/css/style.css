@@ -130,7 +130,6 @@ body {
   font-size: var(--font-base);
   line-height: var(--line-base);
   font-weight: 500;
-  word-break: keep-all;
   color: black;
   background: white;
   margin: 0;
@@ -153,8 +152,11 @@ thead,
 button {
   font-size: var(--font-base);
   line-height: var(--line-base);
-  word-break: keep-all;
   overflow-wrap: break-word;
+}
+
+button {
+    font-family: "Pretendard", sans-serif;
 }
 
 th,
@@ -202,6 +204,7 @@ a:not(header a):hover {
   font-family: inherit;
   font-size: inherit;
   text-decoration: none;
+
 }
 
 ul {
@@ -228,15 +231,49 @@ img {
   margin: 0;
 }
 
+[lang="en"], [lang="en"] > div, [lang="en"] > span, [lang="en"] > p {
+  hyphens: auto;
+}
+
+p {
+     -webkit-hyphens: auto;
+     -webkit-hyphenate-limit-before: 3;
+     -webkit-hyphenate-limit-after: 3;
+     -webkit-hyphenate-limit-chars: 6 3 3;
+     -webkit-hyphenate-limit-lines: 2;
+     -webkit-hyphenate-limit-last: always;
+     -webkit-hyphenate-limit-zone: 8%;
+     -moz-hyphens: auto;
+     -moz-hyphenate-limit-chars: 6 3 3;
+     -moz-hyphenate-limit-lines: 2;
+     -moz-hyphenate-limit-last: always;
+     -moz-hyphenate-limit-zone: 8%;
+     -ms-hyphens: auto;
+     -ms-hyphenate-limit-chars: 6 3 3;
+     -ms-hyphenate-limit-lines: 2;
+     -ms-hyphenate-limit-last: always;
+     -ms-hyphenate-limit-zone: 8%;
+     hyphens: auto;
+     hyphenate-limit-chars: 6 3 3;
+     hyphenate-limit-lines: 2;
+     hyphenate-limit-last: always;
+     hyphenate-limit-zone: 8%;
+ }
+
 /* for markdown */
 [data-lang] p,
 [data-lang] ul {
   margin-bottom: 1rem;
 }
 
+
 [data-lang] p:last-child {
   margin-bottom: 0;
 }
+
+ [data-lang="en"] {
+    hyphens: auto;
+  }
 
 /* 000000000 */
 
@@ -515,7 +552,7 @@ main .exhibitions-item {
 }
 
 .workshops-item div .workshops-head div {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
   word-break: break-word;
 }
 
@@ -526,7 +563,7 @@ main .exhibitions-item {
 
 .workshops-item span {
   word-break: break-word;
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
 }
 
 .exhibitions-head,
@@ -564,7 +601,10 @@ main .exhibitions-item {
 .committee-item > div,
 .collections-item > div, .exhibition-item-container > div {
   min-width: 0;
-  overflow-wrap: anywhere;
+  overflow-wrap: normal;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .content {
@@ -646,8 +686,6 @@ main .exhibitions-item {
   align-items: center;
   gap: 8px;
   overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
   min-width: 0;
 }
 
