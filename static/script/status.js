@@ -9,14 +9,16 @@ dStatus = async () => {
     if (!response.ok) {
       throw new Error("GitHub API request failed");
     }
+    
+    const { workflow_runs  } = await response.json();
+    
+    const { status, head_commit, head_sha, run_started_at, created_at, updated_at, started_at, html_url } = workflow_runs[0];
 
-    const { workflow_runs } = await response.json();
-    const run = workflow_runs[0];
-
-    if (!run) return;
-
-    const commitUrl = `https://github.com/KaywonKUMA/kaywonkuma.github.io/commit/${run.head_sha}`;
-    const { committer, message, timestamp } = run.head_commit;
+    if (!workflow_runs[0]) return;
+    
+    const commitUrl = `https://github.com/KaywonKUMA/kaywonkuma.github.io/commit/${head_sha}`;
+    const { committer, message, timestamp } = head_commit;
+    
 
     const formatDate = (date) =>
       new Date(date).toLocaleString("ko-KR", {
@@ -36,47 +38,26 @@ dStatus = async () => {
     console.log(`Author    : ${committer.name}`);
     console.log(`Timestamp : ${formatDate(timestamp)}`);
     console.log(commitUrl);
-    console.log()
     
     console.log("[ BUILD STATUS ]");
 
-    console.log(`Started   : ${formatDate(run.run_started_at || run.created_at)}`);
+    console.log(`Started   : ${formatDate(run_started_at || created_at)}`);
 
-    if (run.status === "completed") {
-      console.log(`Completed : ${formatDate(run.updated_at)}`);
+    if (status === "completed") {
+      console.log(`Completed : ${formatDate(updated_at)}`);
 
       const duration = Math.floor(
-        (new Date(run.updated_at) - new Date(run.run_started_at)) / 1000
+        (new Date(updated_at) - new Date(run_started_at)) / 1000
       );
-
-      console.log(`Duration  : ${duration}s`);
-    } else {
-      console.log("Completed : Not yet completed");
-    }
-
-    let status;
-
-    if (run.status === "queued") {
-      status = "BUILD QUEUED";
-    } else if (run.status === "in_progress") {
-      status = "BUILD IN PROGRESS";
-    } else if (run.conclusion === "success") {
-      status = "BUILD SUCCESS";
-    } else if (run.conclusion === "failure") {
-      status = "BUILD FAILED";
-    } else if (run.conclusion === "cancelled") {
-      status = "BUILD CANCELLED";
-    } else {
-      status = "UNKNOWN";
-    }
-
-    console.log(`Status    : ${status}`);
-    console.log(`Workflow  : ${run.html_url}`);
-
+          console.log(`Duration  : ${duration}s`);
+      } else {
+          console.log("Completed : Not yet completed");
+      }
+      console.log(`Status    : ${status}`);
+      console.log(`Workflow  : ${html_url}`);
   } catch (error) {
     console.error("[ DEPLOYMENT ERROR ]", error);
   }
-  
 };
 
 
