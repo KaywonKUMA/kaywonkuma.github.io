@@ -29,7 +29,7 @@ ko:
       name: 이영준 교수
       affiliation: 서울과학기술대학교 융합교양학부
     - role: 행정지원
-      name: 오정석 팀장
+      name: 정재환 팀장
       affiliation: 실습지원팀
 en:
   items:
