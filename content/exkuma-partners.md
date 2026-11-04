@@ -2,7 +2,7 @@
 items:
   - name: Boisbuchet
     logo: /assets/logo 1-1.webp
-    size: 80
+    size: 50
   - name: Notpla
     logo: /assets/logo 2-1.webp
     size: 100
