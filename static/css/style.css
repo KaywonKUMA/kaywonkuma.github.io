@@ -730,7 +730,7 @@ main .exhibitions-item {
   color: var(--exkuma-text);
 }
 
-.container.ex-kuma .title:hover:not(.upcoming-item .title),
+.container.ex-kuma .title a:hover,
 .container.ex-kuma .category a:hover,
 .container.ex-kuma a:hover:not(nav a) {
   color: var(--exkuma-hover);
