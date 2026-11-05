@@ -285,6 +285,12 @@ collections:
         widget: string
         hint: 보도자료 등
         i18n: true
+      - name: date
+        label: 보도날짜
+        widget: datetime
+        type: date
+        i18n: duplicate
+        required: false
       - name: title
         label: 제목
         widget: string
@@ -585,6 +591,12 @@ collections:
         widget: string
         i18n: true
         hint: 보도자료 등
+      - name: date
+        label: 보도날짜
+        widget: datetime
+        type: date
+        i18n: duplicate
+        required: true
       - name: title
         label: 제목
         widget: string
