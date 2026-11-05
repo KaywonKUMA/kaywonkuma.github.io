@@ -689,6 +689,11 @@ main .exhibitions-item {
   min-width: 0;
 }
 
+.exhibition-item-container .type {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+
 .exhibition-item-container .top .title.clickable > *:not(.mark) {
   cursor: pointer;
 }
