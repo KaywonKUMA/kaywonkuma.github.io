@@ -7,9 +7,9 @@
     </div>
     <div class="news-grid">
       <div data-lang="ko">
-        {{ range where site.RegularPages "Section" (.section) }}
+        {{ range sort (where site.RegularPages "Section" (.section)) ".Params.ko.date" "desc" }}
           <div class="news-item-container">
-            <div class="news-item">
+            <div class="news-item" data-date="{{ .Params.ko.date }}">
               <div class="type">{{ .Params.ko.type }}</div>
               <div class="title">
                 <a href="{{ .Params.ko.link }}">
@@ -20,8 +20,9 @@
           </div>
         {{ end }}
       </div>
+    
       <div data-lang="en">
-        {{ range where site.RegularPages "Section" (.section) }}
+        {{ range sort (where site.RegularPages "Section" (.section)) ".Params.ko.date" "desc" }}
           <div class="news-item-container">
             <div class="news-item">
               <div class="type">{{ .Params.en.type }}</div>

@@ -279,6 +279,11 @@ collections:
     media_folder: "{{media_folder}}/kuma-news/{{slug}}"
     public_folder: "{{public_folder}}/kuma-news/{{slug}}"
     i18n: true
+    sortable_fields:
+       fields: [title, date]
+       default:
+         field: date
+         direction: ascending  
     fields:
       - name: type
         label: 형식
@@ -585,6 +590,11 @@ collections:
     media_folder: "{{media_folder}}/exkuma-news/{{slug}}"
     public_folder: "{{public_folder}}/exkuma-news/{{slug}}"
     i18n: true
+    sortable_fields:
+       fields: [title, date]
+       default:
+         field: date
+         direction: ascending  
     fields:
       - name: type
         label: 형식
