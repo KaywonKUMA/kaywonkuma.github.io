@@ -80,22 +80,29 @@ document.addEventListener("DOMContentLoaded", () => {
   rightContainer.style.setProperty("--exkuma-bg", selected.bg);
   rightContainer.style.setProperty("--exkuma-text", selected.text);
   
-  let hoverColor;
-
-  exKumaTitle.addEventListener("mouseover", () => {
-    if (!hoverColor) {
-      const availableColors = colorThemes
-        .filter((theme) => theme.text !== selected.text)
-        .map((theme) => theme.text);
-
-      hoverColor =
-        availableColors[Math.floor(Math.random() * availableColors.length)];
-    }
-
-    exKumaTitle.style.color = hoverColor;
-  });
-
-  exKumaTitle.addEventListener("mouseout", () => {
-    exKumaTitle.style.color = selected.text;
-  });
-});
+    const availableColors = colorThemes
+      .filter((theme) => theme.text !== selected.text)
+      .map((theme) => theme.text);
+    
+    const hoverColor =
+      availableColors[Math.floor(Math.random() * availableColors.length)];
+    
+    rightContainer.style.setProperty("--exkuma-hover", hoverColor);
+  
+//   exKumaTitle.addEventListener("mouseover", () => {
+//     if (!hoverColor) {
+//       const availableColors = colorThemes
+//         .filter((theme) => theme.text !== selected.text)
+//         .map((theme) => theme.text);
+// 
+//       hoverColor =
+//         availableColors[Math.floor(Math.random() * availableColors.length)];
+//     }
+// 
+//     exKumaTitle.style.color = hoverColor;
+//   });
+// 
+//   exKumaTitle.addEventListener("mouseout", () => {
+//     exKumaTitle.style.color = selected.text;
+//   });
+ });

@@ -725,6 +725,17 @@ main .exhibitions-item {
   grid-template-columns: clamp(75px, 8vw, 95px) auto;
 }
 
+.container.ex-kuma .title,
+.container.ex-kuma a {
+  color: var(--exkuma-text);
+}
+
+.container.ex-kuma .title:hover:not(.upcoming-item .title),
+.container.ex-kuma .category a:hover,
+.container.ex-kuma a:hover:not(nav a) {
+  color: var(--exkuma-hover);
+}    
+
 .container.ex-kuma .news-head,
 .workshops-head {
   border-bottom: 1px solid var(--exkuma-text);
