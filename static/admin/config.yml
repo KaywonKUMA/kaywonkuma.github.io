@@ -295,7 +295,7 @@ collections:
         widget: datetime
         type: date
         i18n: duplicate
-        required: false
+        required: true
       - name: title
         label: 제목
         widget: string
